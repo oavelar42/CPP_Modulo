@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/30 18:35:19 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/30 22:38:11 by oavelar          ###   ########.fr       */
+/*   Created: 2021/08/30 22:12:22 by oavelar           #+#    #+#             */
+/*   Updated: 2021/08/30 22:38:02 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int main()
-{
-    std::string input;
-    //int         count;
-    //contact     phonebook[8];
+# define YEL "\033[33;1m"
+# define RED "\033[31m"
+# define OFF "\033[0m"
+# define LET "\n\033[1m"
 
-    std::cout << YEL "------ PHONE BOOK ------" OFF << std::endl;
-    //count = 0;
-    while (1)
-    {
-        std::cout << LET "What do you need ?" OFF << std::endl;
-        std::getline(std::cin, input);
-    }
-    return (0);
-}
+# include <iostream>
+# include <iomanip>
+# include <string>
+
+
+
+#endif

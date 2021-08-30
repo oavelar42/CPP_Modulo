@@ -6,18 +6,18 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 18:35:16 by oavelar           #+#    #+#              #
-#    Updated: 2021/08/30 18:39:31 by oavelar          ###   ########.fr        #
+#    Updated: 2021/08/30 22:37:29 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phoneBook
+NAME = phonebook
 
 ifeq ($(shell uname), Linux)
-CC = g++
+ CC = g++
 else
-CC = clang++
+ CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -pedantic -std=c++98
 
 FILE = main.cpp
 
@@ -27,12 +27,14 @@ YEL			= \033[33;1m
 OFF			= \033[0m
 
 all: $(NAME)
-	@$(CC) $(FLAGS) $(FILE) -o $(NAME)
+
+$(NAME):
+	@$(CC) $(FILE) $(FLAGS) -o $(NAME)
 	@echo "Compilation of $(YEL)$(NAME): $(OFF) $(OK)$(OFF)"
 
 clean:
 	@rm -f $(NAME)
-	@echo "$(RED)Removed$(OFF)"
+	@echo "$(RED)Removed!$(OFF)"
 
 fclean: clean
 
