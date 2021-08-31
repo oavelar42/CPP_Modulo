@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 22:12:22 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/30 22:38:02 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/08/31 17:41:27 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,19 @@
 # include <iomanip>
 # include <string>
 
+class Contact
+{
+    private:
+            std::string firstName;
+            std::string lastName;
+    public:
+            Contact(void) {}
+            ~Contact(void) {}
+            void    addContact(void);
+            void    displayContact(int a) const;
+            void    displayWrite(void) const;
+};
 
+void       ft_len(std::string str, int end);
 
 #endif
