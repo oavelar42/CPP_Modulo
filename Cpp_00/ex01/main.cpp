@@ -6,21 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:35:19 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/31 17:43:28 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/08/31 21:26:05 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
-
-void    ft_len(std::string str, int end)
-{
-    if (str.length() >= 10)
-        std::cout << str.substr(0, 9) << ".";
-    else
-        std::cout << std::setw(10) << str;
-    if (end == 0)
-        std::cout << "|";
-}
 
 int main()
 {
@@ -32,6 +22,7 @@ int main()
     count = 0;
     while (1)
     {
+        std::cout << LET "You have 3 options : ADD , SEARCH or EXIT to finish." OFF;
         std::cout << LET "What do you need ?" OFF << std::endl;
         std::getline(std::cin, input);
         if (input.compare("ADD") == 0)
@@ -44,8 +35,8 @@ int main()
                 ++count;
             }
         }
-        //else if (input.compare("SEARCH") == 0)
-        //    searchContact(phonebook, i);
+        else if (input.compare("SEARCH") == 0)
+           searchContact(phonebook, count);
         else if (input.compare("EXIT") == 0)
             return (0);
         else if (input.compare("") == 1)

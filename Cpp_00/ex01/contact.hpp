@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 22:12:22 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/31 17:41:27 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/08/31 21:28:50 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,18 @@ class Contact
     private:
             std::string firstName;
             std::string lastName;
+            std::string nickName;
+            std::string phoneNum;
+            std::string darkestSecret;
     public:
             Contact(void) {}
-            ~Contact(void) {}
+            //~Contact(void) {}
             void    addContact(void);
             void    displayContact(int a) const;
             void    displayWrite(void) const;
 };
 
-void       ft_len(std::string str, int end);
+void        ft_len(std::string str, int end);
+void        searchContact(Contact phonebook[], int count);
 
 #endif
