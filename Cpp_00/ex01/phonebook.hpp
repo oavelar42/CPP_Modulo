@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 22:12:22 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/01 16:27:18 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/01 16:48:21 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Contact
             std::string darkestSecret;
     public:
             Contact(void) {}
+            ~Contact(void) {}
             void    addContact(void);
             void    displayContact(int a) const;
             void    displayWrite(void) const;
