@@ -6,11 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 19:55:32 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/31 21:35:54 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/01 15:56:01 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "phonebook.hpp"
 
 void    ft_len(std::string str, int end)
 {
@@ -37,5 +37,9 @@ void    searchContact(Contact phonebook[], int count)
         phonebook[a].displayContact(a);
     std::cout << "\nEnter index :" << std::endl;
     std::string a;
-    std::getline(std::cin, a);           
+    std::getline(std::cin, a); 
+    if (a.length() != 1 || a[0] < '0' || a[0] > count + 47)
+        std::cout << GRE "Contact number " << a << " not found." OFF << std::endl;          
+    else
+        phonebook[a[0] - 48].displayWrite();
 }

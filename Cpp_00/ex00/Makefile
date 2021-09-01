@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 16:41:28 by oavelar           #+#    #+#              #
-#    Updated: 2021/08/31 17:58:34 by oavelar          ###   ########.fr        #
+#    Updated: 2021/09/01 15:56:04 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,4 +36,6 @@ fclean:
 	@rm $(NAME)
 	@echo "$(RED)All removed!$(OFF)"
 
-.PHONY: all clean fclean 
+re: fclean all
+
+.PHONY: all clean fclean re

@@ -6,11 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:35:19 by oavelar           #+#    #+#             */
-/*   Updated: 2021/08/31 21:26:05 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/01 15:56:16 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "phonebook.hpp"
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
     int         count;
     Contact     phonebook[8];
 
-    std::cout << YEL "------ PHONE BOOK ------" OFF << std::endl;
+    std::cout << OTA "------ PHONE BOOK ------" OFF << std::endl;
     count = 0;
     while (1)
     {
@@ -28,7 +28,7 @@ int main()
         if (input.compare("ADD") == 0)
         {
             if (count >= 8)
-                std::cout << RED "You are full in your Phone Book" OFF << std::endl;
+                std::cout << RED "Your phonebook is full" OFF << std::endl;
             else
             {
                 phonebook[count].addContact();
