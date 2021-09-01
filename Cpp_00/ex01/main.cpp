@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:35:19 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/01 15:56:16 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/01 16:35:05 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main()
     std::string input;
     int         count;
     Contact     phonebook[8];
+    //char        str = 1;
 
     std::cout << OTA "------ PHONE BOOK ------" OFF << std::endl;
     count = 0;
@@ -41,5 +42,7 @@ int main()
             return (0);
         else if (input.compare("") == 1)
             std::cout << RED "Unknow request" OFF << std::endl;
+        else if (input.compare("ADD") != 1)
+            std::cout << RED "You have only three choices!" OFF << std::endl;
     }
 }
