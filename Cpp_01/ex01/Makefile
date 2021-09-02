@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/01 22:13:07 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/02 15:16:18 by oavelar          ###   ########.fr        #
+#    Created: 2021/09/02 15:16:28 by oavelar           #+#    #+#              #
+#    Updated: 2021/09/02 15:17:10 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+FILE = main.cpp Zombie.cpp ZombieHorde.cpp
 OBJ = .o
 OK			= [\033[32mOK\033[0m]
 RED			= \033[1;31m
