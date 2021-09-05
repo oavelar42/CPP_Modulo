@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/02 17:36:19 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/05 14:55:52 by oavelar          ###   ########.fr        #
+#    Created: 2021/09/05 14:59:37 by oavelar           #+#    #+#              #
+#    Updated: 2021/09/05 15:05:22 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = ufc
 
 ifeq ($(shell uname), Linux)
  CC = g++
@@ -19,9 +19,8 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp
-OBJ = ${FILE:.cpp=.o}
-
+FILE = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+OBJ = .o
 OK			= [\033[32mOK\033[0m]
 RED			= \033[1;31m
 MAG			= \033[33;95m
