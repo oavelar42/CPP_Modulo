@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/05 14:59:37 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/05 18:41:21 by oavelar          ###   ########.fr        #
+#    Created: 2021/09/05 21:37:20 by oavelar           #+#    #+#              #
+#    Updated: 2021/09/05 21:38:02 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ufc
+NAME = replace
 
 ifeq ($(shell uname), Linux)
  CC = g++
@@ -19,8 +19,9 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
-OBJ = .o
+FILE = main.cpp
+OBJ = ${FILE:.cpp=.o}
+
 OK			= [\033[32mOK\033[0m]
 RED			= \033[1;31m
 MAG			= \033[33;95m
