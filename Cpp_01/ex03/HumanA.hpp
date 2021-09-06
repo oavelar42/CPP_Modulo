@@ -6,11 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:59:33 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/05 21:35:23 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/06 18:51:06 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAMA_HPP
+#ifndef HUMANA_HPP
 # define HUMANA_HPP
 
 # define OTA "\x1B[36m"
@@ -24,8 +24,8 @@
 class HumanA
 {
     private:
-        std::string name_1;
-        Weapon &weapon_1;
+        std::string name_a;
+        Weapon &weapon_a;
 
     public:
        HumanA(std::string name, Weapon &weapon);

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:59:43 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/05 21:35:29 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/06 18:50:57 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 class HumanB
 {
     private:
-        std::string name_1;
-        Weapon *weapon_1;
+        std::string name_b;
+        Weapon *weapon_b;
 
     public:
         HumanB(std::string name);
@@ -36,6 +36,5 @@ class HumanB
         void getWeapon(void);
 
 };
-
 
 #endif
