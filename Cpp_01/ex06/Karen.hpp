@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 18:01:41 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/07 22:24:21 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/07 22:39:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define LET "\n\033[1m"
 
 #include <iostream>
+# include <string>
 
 class Karen
 {
