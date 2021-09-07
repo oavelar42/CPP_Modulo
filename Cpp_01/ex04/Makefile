@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/05 21:37:20 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/05 21:38:02 by oavelar          ###   ########.fr        #
+#    Created: 2021/09/07 16:09:24 by oavelar           #+#    #+#              #
+#    Updated: 2021/09/07 16:29:58 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@ ifeq ($(shell uname), Linux)
 else
  CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror
 
 FILE = main.cpp
-OBJ = ${FILE:.cpp=.o}
+OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
 RED			= \033[1;31m
