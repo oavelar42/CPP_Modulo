@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/07 18:01:48 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/07 18:02:19 by oavelar          ###   ########.fr        #
+#    Updated: 2021/09/07 21:46:57 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ ifeq ($(shell uname), Linux)
 else
  CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp
+FILE = main.cpp Karen.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
