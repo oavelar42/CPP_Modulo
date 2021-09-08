@@ -5,22 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 18:01:45 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/07 23:12:18 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/08 21:33:38 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/08 21:37:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Fixed.hpp"
 
-int main(int ac, char *av[])
+int main( void )
 {
-    Karen karen_crazy;
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
 
-    if (ac != 2)
-	{
-		std::cout << RED "Error: Invalid number of arguments." OFF << std::endl;
-		return 1;
-	}
-	karen_crazy.complain(av[1]);
+    c = b;
+    
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+
     return 0;
 }
