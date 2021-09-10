@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 21:33:34 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/10 16:53:18 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/10 17:00:06 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define LET "\033[1m"
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
