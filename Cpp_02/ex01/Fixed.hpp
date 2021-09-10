@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 21:33:34 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/10 17:00:06 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/10 20:30:56 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,26 @@ class Fixed
 {
     private:
         int _value;
-        const static int _bits = 8;
+        static const int _bits = 8;
 
     public:
         Fixed(void);
-        Fixed(Fixed& n);
+
+        Fixed(const Fixed& n);  //copiar
+        
+        Fixed(const int val);     // as duas para especificar os tipos
+        Fixed(const float val);
+
         ~Fixed(void);
-        Fixed& operator=(Fixed& n);
+        Fixed& operator=(const Fixed& n);
         int getRawBits( void ) const;
         void setRawBits( int const raw ); 
+
+        float toFloat(void) const;
+        int toInt(void) const;
     
 };
 
+std::ostream& operator << (std::ostream& out, const Fixed& n);
 
 #endif
