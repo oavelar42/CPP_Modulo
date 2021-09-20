@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/17 18:23:57 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/17 18:24:39 by oavelar          ###   ########.fr        #
+#    Updated: 2021/09/20 17:07:21 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp Fixed.cpp
+FILE = main.cpp ClapTrap.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
