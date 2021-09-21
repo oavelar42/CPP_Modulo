@@ -6,29 +6,26 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:24:00 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/20 22:30:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/21 22:27:22 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-	ClapTrap ota(OTA "Messi " OFF);
-	ClapTrap ota1(RED "Neymar " OFF);
-	ClapTrap ota2(GRE "Mbappé " OFF);
+	FragTrap ota;
+	FragTrap ota1(RED "Acerola " OFF);
+	FragTrap ota2(GRE "Laranjinha " OFF);
 
-	ota.attack("Mbappé ");
-	ota.takeDamage(2);
-    ota.beRepaired(1);
+	ota.attack("Perdeu, perdeu ");
+	ota1.takeDamage(22);
 
-	ota2.attack("Neymar ");
-	ota2.takeDamage(5);
-    ota2.beRepaired(4);
+	ota2.attack("Meu nome é ");
+	ota2.takeDamage(55);
+	ota.highFivesGuys();
+    ota2.beRepaired(38);
 
-	ota1.attack("Messi ");
-	ota1.takeDamage(3);
-	ota1.beRepaired(2);
 
 	return 0;
 }

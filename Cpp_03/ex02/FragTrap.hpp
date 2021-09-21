@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 18:24:45 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 18:25:07 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/21 22:22:01 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,18 @@
 # define GRE "\x1B[32m"
 
 #include <iostream>
+#include <string>
+#include "ClapTrap.hpp"
+
+class FragTrap: public ClapTrap
+{
+    public:
+            FragTrap(void);
+            FragTrap(std::string const name_1);
+            FragTrap(FragTrap const& copy);
+            ~FragTrap(void);
+            FragTrap& operator=(FragTrap const& copy);
+            void highFivesGuys(void);
+};
 
 #endif
