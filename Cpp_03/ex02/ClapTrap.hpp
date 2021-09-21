@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:24:02 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 16:17:41 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/20 22:35:50 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 class ClapTrap
 {
-    protected :
+    private :
         std::string name;
         unsigned int hitpoints;
         unsigned int energy;

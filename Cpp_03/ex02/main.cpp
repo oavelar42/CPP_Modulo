@@ -6,26 +6,15 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:24:00 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 18:10:59 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/20 22:30:13 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 int main(void)
 {
-	ScavTrap	ota(OTA "Elon Musk " OFF);
-	ScavTrap	ota1(GRE "DogeCoin " OFF);
-
-	ota.attack("DogeCoin ");
-	ota.takeDamage(20);
-    ota.beRepaired(45);
-	ota.guardGate();
-	
-	return 0;
-}
-
-/*ClapTrap ota(OTA "Messi " OFF);
+	ClapTrap ota(OTA "Messi " OFF);
 	ClapTrap ota1(RED "Neymar " OFF);
 	ClapTrap ota2(GRE "Mbappé " OFF);
 
@@ -41,4 +30,5 @@ int main(void)
 	ota1.takeDamage(3);
 	ota1.beRepaired(2);
 
-	return 0*/
+	return 0;
+}

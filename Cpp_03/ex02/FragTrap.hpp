@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 22:45:52 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 18:18:12 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/21 18:24:45 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/21 18:25:07 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # define OTA "\x1B[36m"
 # define RED "\x1B[31m"
@@ -19,18 +19,5 @@
 # define GRE "\x1B[32m"
 
 #include <iostream>
-#include <string>
-#include "ClapTrap.hpp"
-
-class ScavTrap: public ClapTrap
-{
-    public:
-        ScavTrap(void);
-        ScavTrap(std::string const name_1);
-        ScavTrap(const ScavTrap& copy);
-        ~ScavTrap(void);
-        ScavTrap& operator=(const ScavTrap& value);
-        void    guardGate();
-};
 
 #endif
