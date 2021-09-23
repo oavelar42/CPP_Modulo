@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 18:24:45 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/23 17:10:23 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/23 17:36:23 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/23 17:36:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
 # define OTA "\x1B[36m"
 # define RED "\x1B[31m"
@@ -19,18 +19,5 @@
 # define GRE "\x1B[32m"
 
 #include <iostream>
-#include <string>
-#include "ClapTrap.hpp"
-
-class FragTrap : public ClapTrap
-{
-    public:
-        FragTrap(void);
-        FragTrap(std::string const name_1);
-        FragTrap(const FragTrap& copy);
-        ~FragTrap(void);
-        FragTrap& operator=(const FragTrap& value);
-        void highFivesGuys(void);
-};
 
 #endif
