@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/17 18:23:57 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/23 17:37:20 by oavelar          ###   ########.fr        #
+#    Updated: 2021/09/25 20:00:40 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
-FILE = main.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp
+FILE = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]

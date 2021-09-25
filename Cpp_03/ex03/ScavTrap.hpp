@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/23 17:36:23 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/25 20:06:24 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/20 22:45:52 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/25 20:36:28 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # define OTA "\x1B[36m"
 # define RED "\x1B[31m"
@@ -19,22 +19,18 @@
 # define GRE "\x1B[32m"
 
 #include <iostream>
+#include <string>
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class ScavTrap: virtual public ClapTrap
 {
-        private :
-                std::string     name;
-        
-        public :
-                DiamondTrap(void);
-                DiamondTrap(std::string name_1);
-                DiamondTrap(const DiamondTrap& copy);
-                DiamondTrap& operator=(const DiamondTrap& copy);
-                ~DiamondTrap(void);
-                void whoAmI();
+    public:
+        ScavTrap(void);
+        ScavTrap(std::string const name_1);
+        ScavTrap(const ScavTrap& copy);
+        ~ScavTrap(void);
+        ScavTrap& operator=(const ScavTrap& value);
+        void    guardGate();
 };
 
 #endif
