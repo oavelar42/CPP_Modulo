@@ -6,26 +6,25 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:24:00 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/23 17:28:25 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/26 22:25:08 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-	//FragTrap ota;
-	FragTrap ota1(RED "Zé pequeno " OFF);
-	FragTrap ota2(GRE "Byscapé " OFF);
+	DiamondTrap Hero("John");
+	Hero.attack("Gorila");
+	Hero.highFivesGuys();
+	Hero.guardGate();
+	Hero.whoAmI();
 
-	ota2.attack(", perdeu, perdeu ");
-	ota1.takeDamage(22);
+	DiamondTrap Hero1("John fbfbxcbxcbx ");
+	Hero1.attack("Gorila");
+	Hero1.highFivesGuys();
+	Hero1.guardGate();
+	Hero1.whoAmI();
 
-	ota1.attack("marreco ");
-	ota2.takeDamage(15);
-	ota1.highFivesGuys();
-    ota2.beRepaired(38);
-
-
-	return 0;
+return 0;
 }

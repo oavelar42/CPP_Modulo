@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 18:24:23 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/23 17:32:25 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/26 19:30:20 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap(void)
 {
-    std::cout << "Constructor is called " << std::endl;
+    std::cout << "FragTrap constructor is called " << std::endl;
 }
 
 FragTrap::FragTrap(std::string const name_1)
@@ -43,7 +43,7 @@ FragTrap& FragTrap::operator=(const FragTrap& copy)
 
 FragTrap::~FragTrap(void)
 {
-    std::cout << "FragTrap Destructor is called " << std::endl;
+    std::cout << "FragTrap destructor is called " << std::endl;
 }
 
 void FragTrap::highFivesGuys(void) {

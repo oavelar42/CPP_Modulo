@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 22:45:57 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 18:17:44 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/26 19:29:49 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap(void)
 {
-    std::cout << "Constructor is called " << std::endl;
+    std::cout << "ScavTrap constructor is called " << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string const name_1)

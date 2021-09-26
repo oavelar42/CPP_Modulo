@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 18:24:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/23 17:14:40 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/26 19:30:09 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& copy)
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << "Claptrap Destructor is called " << std::endl;
+    std::cout << "Claptrap destructor is called " << std::endl;
 }
 
 void ClapTrap::attack(std::string const& target)
