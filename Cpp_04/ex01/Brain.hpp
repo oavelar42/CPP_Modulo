@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 16:22:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 22:08:26 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/27 22:56:47 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/27 22:57:18 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # define OTA "\x1B[36m"
 # define RED "\x1B[31m"
@@ -20,17 +20,14 @@
 
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
 
-class Dog : public Animal
+class Animal
 {
     public :
-        Dog(void);
-        Dog(Dog const& copy);
-        Dog& operator=(Dog const& copy);
-        virtual ~Dog(void);
+         
 
-        virtual void makeSound(void) const;
+    protected :
+       
 };
 
 #endif
