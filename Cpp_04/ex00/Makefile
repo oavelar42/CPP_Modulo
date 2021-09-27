@@ -5,12 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/17 18:23:57 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/27 16:18:58 by oavelar          ###   ########.fr        #
+#    Created: 2021/09/27 16:21:42 by oavelar           #+#    #+#              #
+#    Updated: 2021/09/27 16:22:16 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = diamondtrap
+
+NAME = hotdog
 
 ifeq ($(shell uname), Linux)
  CC = g++
@@ -19,7 +20,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
-FILE = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
+FILE = main.cpp Cat.cpp Dog.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]

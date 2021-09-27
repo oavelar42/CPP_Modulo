@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 22:45:57 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/26 19:29:49 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/27 16:00:28 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
 {
-    name = copy.name;
-    hitpoints = copy.hitpoints;
-    energy = copy.energy;
-    attack_dmg = copy.attack_dmg;
+    ClapTrap::operator=(copy);
     return (*this);
 }
 
