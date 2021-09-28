@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 22:08:26 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/28 21:57:13 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,20 @@
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
-    public :
-        Dog(void);
-        Dog(Dog const& copy);
-        Dog& operator=(Dog const& copy);
-        virtual ~Dog(void);
+    private : 
+            Brain* brain;
 
-        virtual void makeSound(void) const;
+    public :
+            Dog(void);
+            Dog(Dog const& copy);
+            Dog& operator=(Dog const& copy);
+            virtual ~Dog(void);
+
+            virtual void makeSound(void) const;
 };
 
 #endif

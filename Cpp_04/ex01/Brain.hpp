@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 22:56:47 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 22:57:18 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/28 22:03:12 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,16 @@
 #include <iostream>
 #include <string>
 
-class Animal
+class Brain
 {
-    public :
-         
+    private : 
+            std::string ideias[100];
 
-    protected :
-       
+    public :
+            Brain(void);
+            Brain(Brain const& copy);
+            Brain& operator=(Brain const& copy);
+            ~Brain(void);     
 };
 
 #endif

@@ -6,44 +6,40 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:21 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 22:54:05 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/28 22:20:35 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Animal.hpp"
-#include "Wrong.hpp"
+#include "Brain.hpp"
 
-int main(void)
+#define ANIMAL 10
+
+int main( void ) 
 {
-    std::cout << GRE "__________Correct__________\n" OFF << std::endl;
+	std::cout << "\n------------CONSTRUCTOR------------\n" << std::endl;
 
-    const Animal* meta = new Animal();
-    const Animal* i = new Dog();
-    const Animal* j = new Cat();
+	Animal	*animal[ANIMAL];
 
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();                                 //will output the cat sound !
-    j->makeSound();
-    meta->makeSound();
+	for (int i = 0; i < ANIMAL; i++) {
+		if (i % 2)
+			animal[i] = new Dog;
+		else
+			animal[i] = new Cat;
+	}
 
-    delete meta;
-    delete i;
-    delete j;
+	std::cout << "\n----------COPY/DESTRUCTOR----------\n" << std::endl;
 
-    std::cout << RED "\n___________Incorrect___________\n" OFF << std::endl; 
+	for (int i = 0; i < ANIMAL; i++) {
+		std::cout << '|' << animal[i]->getType() << "| ";
 
-    const WrongAnimal* wronganimal = new WrongAnimal();
-    const WrongCat* wrongcat = new WrongCat();
+		animal[i]->makeSound();
+		delete animal[i];
 
-    std::cout << wrongcat->getType() << " " << std::endl;
-    wrongcat->makeSound();
-    wronganimal->makeSound();
-
-    delete wronganimal;
-    delete wrongcat;
+		std::cout << std::endl;
+	}
 
     return (0);
 }
