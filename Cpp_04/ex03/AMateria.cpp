@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/29 16:44:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 22:35:18 by oavelar          ###   ########.fr       */
+/*   Created: 2021/09/29 21:43:30 by oavelar           #+#    #+#             */
+/*   Updated: 2021/09/29 22:07:49 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
-
-#include <iostream>
-#include <string>
 #include "AMateria.hpp"
 
-class Ice : public AMateria
+AMateria::AMateria(void) {   }
+
+AMateria::AMateria(std::string const & type)
 {
-    public : 
-            Ice(void);
-            Ice(Ice const& copy);
-            Ice& operator=(Ice const& copy);
-            ~Ice(void);
+    type_m = type;
+}
 
-            AMateria* clone(void) const;
-            void use(ICharacter& target);
-            
-};
+AMateria::AMateria(AMateria const& copy)
+{
+    *this = copy;
+}
 
-#endif
+AMateria& AMateria::operator=(AMateria const& copy)
+{
+    type_m = copy.type_m;
+    return (*this);
+}
+
+AMateria::~AMateria(void)  {   }
+
+std::string const& AMateria::getType() const
+{
+    return (type_m);
+}
+
+void AMateria::use(ICharacter& target)
+{
+    (void)target;
+}

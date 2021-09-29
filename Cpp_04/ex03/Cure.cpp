@@ -6,7 +6,37 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:19 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 16:44:20 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/29 22:51:16 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Cure.hpp"
+
+Cure::Cure(void)
+{
+    std::cout << type_m << "Cure" << std::endl;
+}
+
+Cure::Cure(Cure const& copy)
+{
+    *this = copy;
+}
+
+Cure& Cure::operator=(Cure const& copy) : AMateria(copy)
+{
+    AMateria::operator=(copy);
+    return (*this);
+}
+
+Cure::~Cure(void) {  }
+
+AMateria* Cure::clone(void) const
+{
+    return new Cure();
+}
+
+void Cure::use(ICharacter& target)
+{
+   std::cout << "* heals " << target.getName() 
+                << "'s wounds *" << std::endl;
+}
