@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:25 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/30 16:27:56 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/09/30 21:46:00 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 Ice::Ice(void)
 {
-    std::cout << type_m << "Ice" << std::endl;
+    //std::cout << type_m << "Ice" << std::endl;
 }
 
-Ice::Ice(Ice const& copy)
+Ice::Ice(Ice const& copy) : AMateria(copy)
 {
     *this = copy;
 }
 
-Ice& Ice::operator=(Ice const& copy) //: AMateria(copy)
+Ice& Ice::operator=(Ice const& copy) 
 {
     AMateria::operator=(copy);
     return (*this);

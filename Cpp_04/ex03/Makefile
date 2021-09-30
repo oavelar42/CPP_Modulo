@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/29 16:43:49 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/29 22:54:18 by oavelar          ###   ########.fr        #
+#    Updated: 2021/09/30 21:44:32 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
-FILE = main.cpp Cure.cpp Ice.cpp AMateria.cpp Character.cpp
+FILE = main.cpp Cure.cpp Ice.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
