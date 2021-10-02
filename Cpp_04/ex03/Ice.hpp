@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 22:35:18 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/02 21:58:14 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class Ice : public AMateria
             Ice(void);
             Ice(Ice const& copy);
             Ice& operator=(Ice const& copy);
-            ~Ice(void);
+            virtual ~Ice(void);
 
-            AMateria* clone(void) const;
-            void use(ICharacter& target);
+            virtual AMateria* clone(void) const;
+            virtual void use(ICharacter& target);
             
 };
 

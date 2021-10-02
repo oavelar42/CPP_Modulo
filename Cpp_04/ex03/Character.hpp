@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:13:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/30 16:24:53 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/02 19:28:24 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Character : public ICharacter
             Character(std::string const & name);
             Character(Character const& copy);
             Character& operator=(Character const& copy);
-            ~Character(void);
+            virtual ~Character(void);
 
             std::string const& getName() const;
 

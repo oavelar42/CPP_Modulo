@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:22 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 22:52:36 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/02 19:34:24 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Cure : public AMateria
             Cure(void);
             Cure(Cure const& copy);
             Cure& operator=(Cure const& copy);
-            ~Cure(void);
+            virtual ~Cure(void);
 
-            AMateria* clone(void) const;
-            void use(ICharacter& target);
+            virtual AMateria* clone(void) const;
+            virtual void use(ICharacter& target);
             
 };
 

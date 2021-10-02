@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 21:43:30 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 22:07:49 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/02 22:58:33 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ AMateria::AMateria(AMateria const& copy)
 
 AMateria& AMateria::operator=(AMateria const& copy)
 {
-    type_m = copy.type_m;
+    if (this != &copy)
+        type_m = copy.type_m;
     return (*this);
 }
 
@@ -34,10 +35,11 @@ AMateria::~AMateria(void)  {   }
 
 std::string const& AMateria::getType() const
 {
-    return (type_m);
+    return type_m;
 }
 
 void AMateria::use(ICharacter& target)
 {
     (void)target;
+    std::cout << "WRONG" << std::endl;
 }
