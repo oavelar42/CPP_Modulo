@@ -6,39 +6,35 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 21:43:34 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/02 19:55:25 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/03 17:09:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef AMateria_HPP
+# define AMateria_HPP
 
 #include <iostream>
 #include <string>
-#include <cmath>
 #include "ICharacter.hpp"
-
-class ICharacter;
 
 class AMateria
 {
-    protected :
+        protected:
 
-            std::string type_m;
+                std::string type_m;
 
-    public :
-    
-            AMateria(void);
-            AMateria(std::string const & type);
-            AMateria(AMateria const& copy);
-            AMateria& operator=(AMateria const& copy);
-            virtual ~AMateria(void);
+        public:
 
-            std::string const& getType() const;
+                AMateria(void);
+                AMateria(std::string const & type);
+                AMateria(const AMateria& copy);
+                AMateria& operator=(const AMateria& copy);
+                virtual ~AMateria(void);
 
-            virtual AMateria* clone() const = 0;
-            virtual void use(ICharacter& target);
-            
+                std::string	const & getType() const;
+                virtual AMateria* clone() const = 0;
+                virtual void use(ICharacter& target);
+
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:13:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/02 19:28:24 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/03 17:10:19 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,29 @@
 
 #include <iostream>
 #include <string>
-#include "ICharacter.hpp"
 #include "AMateria.hpp"
 
 class Character : public ICharacter
 {
-    public :
-    
-            Character(void);
-            Character(std::string const & name);
-            Character(Character const& copy);
-            Character& operator=(Character const& copy);
-            virtual ~Character(void);
+        private:
+        
+                std::string name_c;
+                AMateria* _materia[4];
+                
+        public:
 
-            std::string const& getName() const;
+                Character(void);
+                Character(std::string const & name);
+                Character(const Character& copy);
+                Character& operator=(const Character& copy);
+                virtual ~Character(void);
+                
+                std::string const & getName() const;
+                
+                void equip(AMateria* m);
+                void unequip(int idx);
+                void use(int idx, ICharacter& target);
 
-            void equip(AMateria* m);
-            void unequip(int idx);
-            void use(int idx, ICharacter& target);
-
-    private :
-
-            std::string name_c;
-            AMateria* _materia[4];
-            
 };
 
 #endif

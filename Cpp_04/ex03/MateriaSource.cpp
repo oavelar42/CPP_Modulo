@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 16:32:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/02 22:55:38 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/03 17:10:42 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 MateriaSource::MateriaSource(void) { }
 
-MateriaSource::MateriaSource(MateriaSource const& copy)
+MateriaSource::MateriaSource(const MateriaSource& copy)
 {
-	*this = copy;
+	for (int i = 0; i < 4; i++)
+		this->_materia[i] = copy._materia[i]->clone();
 }
 
 MateriaSource&	MateriaSource::operator=(MateriaSource const& copy) 
@@ -30,32 +31,27 @@ MateriaSource&	MateriaSource::operator=(MateriaSource const& copy)
 	return (*this);
 }
 
-MateriaSource::~MateriaSource(void)
-{
-	for (int i = 0; i < 4; i++){
-		if (_materia[i])
-			delete (_materia[i]);
-	}
-}
+MateriaSource::~MateriaSource(void) { }
 
 void MateriaSource::learnMateria(AMateria* m)
 {
-	for (int i = 0; i < 4; i++) {
-		if (!_materia[i]) {
-			std::cout << m->getType() << " aprendeu, mais ainda nao volta output" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (_materia[i] == NULL)
+		{
+			//std::cout << m->getType() << " aprendeu, mais ainda nao volta output" << std::endl;
 			_materia[i] = m;
-			return ;
+			return;
 		}
 	}
-	delete m;
 }
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-	for (int i = 0; i < 4; i++) {
-		if (_materia[i] && _materia[i]->getType() == type) {
-			return (_materia[i]);
-		}
-	}
-	std::cout << "Materia " << type << " preciso do output do subject" << std::endl;
-	return (0);
+	if (type != "ice" && type != "cure")
+		return 0;
+	for (int i = 0; i < 4; i++)
+		if (_materia[i] && !_materia[i]->getType().compare(type))
+			return _materia[i]->clone();
+	//std::cout << "Materia " << type << " preciso do output do subject" << std::endl;
+	return 0;
 }

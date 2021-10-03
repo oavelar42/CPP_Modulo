@@ -6,35 +6,35 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:25 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/02 21:58:06 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/03 16:54:51 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "Ice.hpp"
 
-Ice::Ice(void) {  }
+Ice::Ice(void): AMateria("ice") { }
 
 Ice::Ice(Ice const& copy) : AMateria(copy)
 {
     *this = copy;
 }
 
-Ice& Ice::operator=(Ice const& copy) 
+Ice& Ice::operator=(const Ice& copy)
 {
-    if (this != &copy)
-        AMateria::operator=(copy);
-    return (*this);
+	if (this != &copy)
+		AMateria::operator=(copy);
+	return *this;
 }
 
 Ice::~Ice(void) {  }
 
-AMateria* Ice::clone(void) const
+AMateria* Ice::clone() const 
 {
-    return new Ice();
+	return new Ice();
 }
-
-void Ice::use(ICharacter& target)
+void	Ice::use(ICharacter& target)
 {
-    std::cout << "* shoots an " << getType() << " bolt at " << target.getName()
-                << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName()
+		        << " *" << std::endl;
 }
