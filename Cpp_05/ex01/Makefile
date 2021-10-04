@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 17:14:41 by oavelar           #+#    #+#              #
-#    Updated: 2021/10/04 16:56:33 by oavelar          ###   ########.fr        #
+#    Updated: 2021/10/04 22:24:11 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
-FILE = main.cpp Bureaucrat.cpp
+FILE = main.cpp Bureaucrat.cpp Form.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:29 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/04 17:35:59 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/04 22:48:45 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ Bureaucrat::~Bureaucrat(void) {  }
 
 void Bureaucrat::increment(void)
 {
-    if ((_grade - 1) < 1)
+    if (_grade < 2)
         throw Bureaucrat::GradeTooHighException();
     _grade--;
 }
 
 void Bureaucrat::decrement(void)
 {
-    if ((_grade + 1) > 150)
+    if (_grade > 149)
         throw Bureaucrat::GradeTooLowException();
     _grade++;
 }
@@ -90,4 +90,17 @@ std::ostream& operator<<(std::ostream& output, const Bureaucrat& bureau)
 {
     output << bureau.getName() << ", bureaucrat grade " << bureau.getGrade() << "!";
     return (output);
+}
+
+void Bureaucrat::signForm(Form* form) {
+	try 
+    {
+		form->Signed(this);
+		std::cout << _name << " signed the form " << form->getName() << std::endl;
+	} 
+    catch (std::exception& e) 
+    {
+		std::cout << _name << " cannot sign the form " << form->getName()
+			<< "." << e.what() << std::endl;
+	}
 }

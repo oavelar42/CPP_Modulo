@@ -6,83 +6,32 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:37 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/04 17:44:40 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/04 22:33:41 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void)
 {
-    std::cout << LET "Increment with BTC " OFF << std::endl;
-    try {
-            Bureaucrat btc(RED "Bitcoin" OFF, 2);
-            std::cout << btc << std::endl;
-            btc.increment();
-            std::cout << btc << std::endl;
-            btc.increment();
-            std::cout << btc << std::endl;
-            btc.increment();
-            std::cout << btc << std::endl;
-            btc.increment();
-            std::cout << btc << std::endl;
-    }
-    catch (const std::exception& error)
-    {
-            std::cout << error.what() << std::endl;
-    }
-
-    std::cout << "\n";
-
-    std::cout << LET "Decrement with ETH " OFF << std::endl;
-    try {
-            Bureaucrat eth(GRE "Ethereum" OFF, 149);
-            std::cout << eth << std::endl;
-            eth.decrement();
-            std::cout << eth << std::endl;
-            eth.decrement();
-            std::cout << eth << std::endl;
-            eth.decrement();
-            std::cout << eth << std::endl;  
-            eth.decrement();
-            std::cout << eth << std::endl;         
-    }
-    catch (const std::exception& error)
-    {
-            std::cout << error.what() << std::endl;
-    }
-
-    std::cout << "\n";
-
-    std::cout << std::endl << LET "Test low:" << std::endl;
-    std::cout << "If the grade to LOW does not increment" OFF << std::endl;
-	
-	try {
-		Bureaucrat low("LOW", 255);
-
-		std::cout << low << std::endl;	
-		low.increment();
+	try
+	{
+		Bureaucrat bart("Bart Simpson", 5);
+		std::cout << bart;
+		Form		form1("Form one", 50, 2);
+		std::cout << form1;
+		bart.signForm(&form1);
+		std::cout << form1;
+		Form		form2("Form two", 3, 2);
+		std::cout << form2;
+		bart.signForm(&form2);
+		
 	}
-
-	catch (const std::exception& error){
-		std::cout << error.what() << std::endl;
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
 	}
-
-	std::cout << std::endl << LET "Test high:" << std::endl;
-    std::cout << "If the grade to high does not increment" OFF << std::endl;
-	
-	try {
-		Bureaucrat high("HIGH", -1);
-
-		std::cout << high << std::endl;	
-		high.increment();
-		std::cout << high << std::endl;
-	}
-
-	catch (const std::exception& error){
-		std::cout << error.what() << std::endl;
-	}
-
     
     return (0);
 }
