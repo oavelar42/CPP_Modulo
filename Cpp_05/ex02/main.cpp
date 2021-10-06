@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:37 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/06 19:00:30 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/06 22:17:10 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Form.hpp"
 //#include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
-//#include "RobotomyRequestForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main(void)
 {
@@ -45,7 +45,7 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 	
-	/*try
+	try
 	{
 		bart.increment();
 		std::cout << bart;
@@ -57,7 +57,7 @@ int main(void)
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
-	}*/
+	}
 
 	try
 	{

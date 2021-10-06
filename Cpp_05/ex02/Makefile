@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 17:14:41 by oavelar           #+#    #+#              #
-#    Updated: 2021/10/06 18:58:26 by oavelar          ###   ########.fr        #
+#    Updated: 2021/10/06 19:34:56 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
-FILE = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp
+FILE = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp 
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
