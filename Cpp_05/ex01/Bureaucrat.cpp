@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:29 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 19:52:50 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/05 20:19:58 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,12 @@ int Bureaucrat::getGrade(void) const
 
 const char* Bureaucrat::GradeTooHighException::what(void) const throw ()
 {
-    return "Grade too high!";
+    return OTA "Grade too high!" OFF;
 }
 
 const char* Bureaucrat::GradeTooLowException::what(void) const throw ()
 {
-    return "Grade too low!";
+    return OTA "Grade too low!" OFF;
 }
 
 

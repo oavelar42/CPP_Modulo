@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 17:47:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 19:53:27 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/05 20:19:37 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Form::Form(std::string const& name, int sign, int execute) : _name(name),
 Form::Form(Form const& copy) : _name(copy._name), _sign(copy._sign),
 		_execute(copy._execute), _isSigned(copy._isSigned) 
 {
-    //*this = copy;
+    *this = copy;
 }
 
 Form& Form::operator=(Form const& copy)
@@ -97,12 +97,12 @@ std::ostream& operator<<(std::ostream& output, const Form& ob)
 
 const char* Form::GradeTooHighException::what(void) const throw ()
 {
-    return "Grade too high.";
+    return OTA "Grade too high." OFF;
 }
 
 const char* Form::GradeTooLowException::what(void) const throw ()
 {
-    return "Grade too low.";
+    return OTA "Grade too low." OFF;
 }
 
 
