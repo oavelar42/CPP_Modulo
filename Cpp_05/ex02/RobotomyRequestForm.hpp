@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 17:07:06 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 20:11:53 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/06 18:59:40 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 
 # include "Form.hpp"
 # include <iostream>
-# include <fstream>
-# include <time.h>
-# include <stdlib.h>
-# include <random>
-# include <string>
 
 class RobotomyRequestForm : public Form {
 
 	public:
+
+			RobotomyRequestForm(void);
+			RobotomyRequestForm()
 
 
 	private:

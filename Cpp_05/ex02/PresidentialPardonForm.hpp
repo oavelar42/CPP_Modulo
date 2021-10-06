@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 17:07:06 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 20:11:33 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/06 16:25:29 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,23 @@
 
 # include "Form.hpp"
 # include <iostream>
-# include <fstream>
-# include <string>
 
-class PresidentialPardonForm : public Form {
-
+class PresidentialPardonForm : public Form 
+{
 	public:
+
+			PresidentialPardonForm(void);
+			PresidentialPardonForm(std::string const& target);
+			PresidentialPardonForm(PresidentialPardonForm const& copy);
+			PresidentialPardonForm& operator=(PresidentialPardonForm const& copy);
+			~PresidentialPardonForm(void);
+
+			virtual void execute(Bureaucrat const & executor) const;
 
 
 	private:
 
+			std::string _target;
 };
 
 #endif

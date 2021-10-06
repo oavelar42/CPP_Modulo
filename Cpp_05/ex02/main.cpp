@@ -6,66 +6,70 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:37 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 20:05:23 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/06 19:00:30 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+//#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+//#include "RobotomyRequestForm.hpp"
 
 int main(void)
 {
-	std::cout << LET "Test high:" << std::endl;
-    std::cout << "The grade is lower than it needed!!!" OFF << std::endl;
-                
-    try 
+	Bureaucrat bart("Hommer simpson", 6);
+	std::cout << bart;
+	
+	/*try
 	{
-            Form high("HIGH", -1, 10);
-            std::cout << high << std::endl;	   
-    }
-
-    catch (const std::exception& error)
-	{		
-		    std::cout << error.what() << std::endl;
-    }
-
-    std::cout << std::endl << LET "Test low:" << std::endl;
-    std::cout << "The grade is higher than it needed!!!" OFF << std::endl;
-                
-    try 
-	{
-            Form low("LOW", 50, 200);
-            std::cout << low << std::endl;	
+		ShrubberyCreationForm SCF("Barney");
+		std::cout << SCF;
+		bart.signForm(&SCF);
+		SCF.execute(bart);
 	}
-
-    catch (const std::exception& error){
-            std::cout << error.what() << std::endl;
-    }
-
-	std::cout << "\n";
-
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}*/
+	
 	try
 	{
-		Bureaucrat bart("Hommer Simpson", 19);
-		std::cout << bart;
-		std::cout << "\n";
-		Form		form1("Form one", 50, 2);
-		std::cout << form1;
-		std::cout << "\n";
-		bart.signForm(&form1);
-		std::cout << "\n";
-		std::cout << form1;
-		std::cout << "\n";
-		Form		form2("Form two", 3, 2);
-		std::cout << form2;
-		std::cout << "\n";
-		bart.signForm(&form2);
-		
+		PresidentialPardonForm PPF("Barney");
+		std::cout << PPF;
+		bart.signForm(&PPF);
+		PPF.execute(bart);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-    
+	
+	/*try
+	{
+		bart.increment();
+		std::cout << bart;
+		RobotomyRequestForm RRF("Barney");
+		std::cout << RRF;
+		bart.signForm(&RRF);
+		RRF.execute(bart);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}*/
+
+	try
+	{
+		PresidentialPardonForm PPF("Barney");
+		std::cout << PPF;
+		bart.signForm(&PPF);
+		PPF.execute(bart);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
     return (0);
 }
