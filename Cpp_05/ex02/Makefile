@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 17:14:41 by oavelar           #+#    #+#              #
-#    Updated: 2021/10/07 22:09:43 by oavelar          ###   ########.fr        #
+#    Updated: 2021/10/10 17:57:56 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ clean:
 	@echo "$(RED)Objects deleted!$(OFF)"
 
 fclean: 
-	@rm $(NAME)
+	@rm $(NAME) Barney_shrubbery
 	@echo "$(RED)All removed!$(OFF)"
 
 re: fclean all 

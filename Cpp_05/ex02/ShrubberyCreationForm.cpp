@@ -6,19 +6,19 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:12:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/10 13:00:48 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/10 21:22:15 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void) : Form("Shrubbery creation", 145, 135)
+ShrubberyCreationForm::ShrubberyCreationForm(void) : Form("Shrubbery creation", 145, 137)
 {
     _target = "none";
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const& target)
-    : Form("Shrubbery creation", 145, 135)
+    : Form("Shrubbery creation", 145, 137)
 {
     _target = target;
 }
@@ -43,7 +43,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 		throw GradeTooLowException();
     std::ofstream file;
     file.open((_target + "_shrubbery").c_str());
-   
+   std::cout << OTA "Barney" OFF << " the tree is ready." << std::endl;
    
  file <<"        _#_          " << std::endl
     <<"       // \\)         " << std::endl
