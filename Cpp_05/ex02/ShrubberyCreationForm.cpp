@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:12:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/07 22:11:37 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/10 13:00:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,22 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void) {  }
 
 void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
 {
-    if (getGradeExec() < executor.getGrade())
-        throw GradeTooLowException();
-    else
-        std::string _fileout = executor.getName() + "_shrubbery";
+   	if (this->getGradeExec() < executor.getGrade())
+		throw GradeTooLowException();
+    std::ofstream file;
+    file.open((_target + "_shrubbery").c_str());
+   
+   
+ file <<"        _#_          " << std::endl
+    <<"       // \\)         " << std::endl
+    <<"      // @ \\)        " << std::endl
+    <<"     //     \\)       " << std::endl
+    <<"    //  / \\  \\)      " << std::endl
+    <<"   // o     O \\)     " << std::endl
+    <<"  //___________\\)    " << std::endl
+    <<"        |=|          " << std::endl
+    <<"        |=|          " << std::endl
+    <<"        |=|          " << std::endl
+    <<"   ¨¨¨¨¨¨¨¨¨¨¨¨¨     " << std::endl;
 
-        // fazer uma arvore aqui kkkkkkkkkkkkkkkk 
 }
