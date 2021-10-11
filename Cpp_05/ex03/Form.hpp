@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 17:46:26 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/10 22:19:15 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/11 19:53:29 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ class Form
                 int getGradeExec(void) const;
                 int	getState(void) const;
                 void beSigned(Bureaucrat* f);
+
+                virtual void		execute(Bureaucrat const & executor) const = 0;
 
     class GradeTooHighException : virtual public std::exception
 	{

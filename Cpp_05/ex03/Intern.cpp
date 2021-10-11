@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:02:14 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/10 22:22:54 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/11 20:54:06 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,11 @@ Intern& Intern::operator=(Intern const& copy)
 
 Intern::~Intern(void) {  }
 
-Form*   Intern::makeForm(std::string const& name, std::string const& target)
+Form*   Intern::makeForm(std::string const & name, std::string const & target)
 {
-    Form *form[3] = 
-                {new PresidentialPardonForm(target), 
-                 new RobotomyRequestForm(target), 
-                 new ShrubberyCreationForm(target)};
+    Form    *form[3] = {new PresidentialPardonForm(target),
+                        new RobotomyRequestForm(target),
+                        new ShrubberyCreationForm(target)};
 
     for (int i = 0; i < 3; i++)
     {
@@ -43,6 +42,6 @@ Form*   Intern::makeForm(std::string const& name, std::string const& target)
         }
         delete form[i];
     }
-    std::cout << name << "nao volta os nome das classes" << std::endl;
+    std::cout << name << " because nothing was found!" << std::endl;
     return (0);
 }
