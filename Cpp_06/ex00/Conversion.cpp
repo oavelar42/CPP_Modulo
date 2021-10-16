@@ -6,12 +6,11 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:14:26 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/12 21:33:08 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/16 22:03:58 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
-#include "Char.hpp"
 
 Conversion::Conversion(char *av) : getline(av) {}
 
@@ -33,6 +32,18 @@ std::string Conversion::getValue() const
 double Conversion::toDouble() const
 {
     return static_cast<double>(toFloat());
+}
+
+char Conversion::toChar() const
+{
+	return static_cast<char>(toFloat(), toInt(), toDouble());
+	/*if (toInt())
+            return static_cast<char>(toInt());
+    else if (toDouble())
+            return static_cast<char>(toDouble());
+    else if (toFloat())
+            return static_cast<char>(toFloat());
+	return (1);*/
 }
 
 std::ostream& operator<<(std::ostream& out, const Conversion& src)

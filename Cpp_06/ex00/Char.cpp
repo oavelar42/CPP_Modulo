@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:24:04 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/12 21:27:46 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/16 19:39:41 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Char& Char::operator=(Char const& other) {
 	return *this;
 }
 
-std::string Char::toChar(void) const {
+Conversion std::string Char::toChar(void) const {
 	return "'" + std::string(1, _converted_value) + "'";
 }
 

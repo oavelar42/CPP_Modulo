@@ -6,19 +6,18 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 21:24:12 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/12 21:35:50 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/16 19:42:23 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHAR_HPP
 # define CHAR_HPP
 
-# include "Conversion.hpp"
 # include <iostream>
 # include <string>
 
-class Char : public Conversion {
-
+class Char
+{
 	public:
 	        Char(void) { }
 		    Char(std::string const& str_to_convert);

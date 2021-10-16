@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/11 21:09:47 by oavelar           #+#    #+#              #
-#    Updated: 2021/10/12 21:23:47 by oavelar          ###   ########.fr        #
+#    Updated: 2021/10/16 21:57:26 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
-FILE = main.cpp Conversion.cpp Char.cpp
+FILE = main.cpp Conversion.cpp
 
 OBJ = .o
 
