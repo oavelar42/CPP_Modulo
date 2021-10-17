@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:14:26 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/16 22:03:58 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/17 19:55:07 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,37 @@ std::ostream& operator<<(std::ostream& out, const Conversion& src)
 	}
 	return out;
 }
+
+Conversion::Char(std::string const& str_to_convert) {
+	_str_to_convert = str_to_convert;
+	_converted_value = _str_to_convert[0];
+}
+
+Conversion::Char(Conversion const& other) {
+	*this = other;
+}
+
+Conversion& Char::operator=(Conversion const& other) {
+	_str_to_convert = other._str_to_convert;
+	_converted_value = other._converted_value;
+
+	return *this;
+}
+
+Conversion std::string Conversion::toChar(void) const {
+	return "'" + std::string(1, _converted_value) + "'";
+}
+
+int Char::toInt(void) const {
+	return static_cast<int>(_converted_value);
+}
+
+float Char::toFloat(void) const {
+	return static_cast<float>(_converted_value);
+}
+
+double Char::toDouble(void) const {
+	return static_cast<double>(_converted_value);
 
 
 
