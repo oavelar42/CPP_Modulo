@@ -6,104 +6,93 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:14:26 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/17 19:55:07 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/19 18:24:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
 
-Conversion::Conversion(char *av) : getline(av) {}
-
-float Conversion::toFloat() const
-{
-    return atof(getline.c_str());
+Conversion::Conversion() {
 }
 
-int Conversion::toInt() const
-{
-    return static_cast<int>(toFloat());
+Conversion::Conversion(const std::string &value) : _value(value) {
 }
 
-std::string Conversion::getValue() const
-{
-    return getline;
+Conversion::~Conversion() {
 }
 
-double Conversion::toDouble() const
-{
-    return static_cast<double>(toFloat());
+Conversion::Conversion(const Conversion& Conversion) {
+	*this = Conversion;
 }
 
-char Conversion::toChar() const
-{
-	return static_cast<char>(toFloat(), toInt(), toDouble());
-	/*if (toInt())
-            return static_cast<char>(toInt());
-    else if (toDouble())
-            return static_cast<char>(toDouble());
-    else if (toFloat())
-            return static_cast<char>(toFloat());
-	return (1);*/
-}
-
-std::ostream& operator<<(std::ostream& out, const Conversion& src)
-{
-	if (!isnan(src.toFloat()) && !isprint(src.toChar()) && !isinf(src.toFloat()))
-		out << "char: Non displayable" << std::endl;
-	else if (isprint(src.toChar()))
-		out << "char:	" << src.toChar() << std::endl;
-	else
-		out << "char: impossible" << std::endl;
-
-	if (isnan(src.toFloat()) || src.toFloat() >= 2147483646 || src.toFloat() <= -2147483648)
-		out << "int: impossible" << std::endl;
-	else
-		out << "int:	" << src.toInt() << std::endl;
-
-	if (src.toFloat() - src.toInt() == 0)
-	{
-		out << "Float:	" << src.toFloat() << ".0f" << std::endl;
-		out << "Double:	" << src.toDouble() << ".0" << std::endl;
-	}
-	else
-	{
-		out << "Float:	" << src.toFloat() << "f" << std::endl;
-		out << "Double:	" << src.toDouble() << std::endl;
-	}
-	return out;
-}
-
-Conversion::Char(std::string const& str_to_convert) {
-	_str_to_convert = str_to_convert;
-	_converted_value = _str_to_convert[0];
-}
-
-Conversion::Char(Conversion const& other) {
-	*this = other;
-}
-
-Conversion& Char::operator=(Conversion const& other) {
-	_str_to_convert = other._str_to_convert;
-	_converted_value = other._converted_value;
-
+Conversion& Conversion::operator=(const Conversion& Conversion) {
+	(void)Conversion;
 	return *this;
 }
 
-Conversion std::string Conversion::toChar(void) const {
-	return "'" + std::string(1, _converted_value) + "'";
+void Conversion::is_char()
+{
+	if (_value == "+inf" || _value == "-inf" || _value == "nan" ||
+		_value == "+inff" || _value == "-inff" || _value == "nanf" ||
+		_value == "error")
+		std::cout << "char: impossible\n";
+	else
+	{
+		char c = static_cast<char>(_av);
+		if (c < 32 || c > 126)
+			std::cout << "char: Non displayable\n";
+		else
+			std::cout << "char: '" << c << "'\n";
+	}
 }
 
-int Char::toInt(void) const {
-	return static_cast<int>(_converted_value);
+void Conversion::convert() {
+
+	const char cValue = toChar();
+	const int iValue = toInt();
+	const float fValue = toFloat();
+	const double dValue = toDouble();
+
+	/*if (fValue < CHAR_MIN || fValue > CHAR_MAX || isnan(fValue)) {
+		std::cout << "char: impossible" << std::endl;
+	} else if (is_char(cValue)) {
+		std::cout << "char: '" << cValue << "'" << std::endl;
+	} else {
+		std::cout << "char: non displayable" << std::endl;
+	}*/
+	if (cValue)
+		is_char();
+	if (iValue < INT_MIN || iValue > INT_MAX || isnan(fValue)) {
+		std::cout << "int: impossible" << std::endl;
+	} else {
+		std::cout << "int: " << iValue << std::endl;
+	}
+
+	if (fValue - iValue == 0) {
+		std::cout << "float: " << fValue << ".0f" << std::endl;
+		std::cout << "double: " << dValue << ".0" << std::endl;
+	} else {
+		std::cout << "float: " << fValue << "f" << std::endl;
+		std::cout << "double: " << dValue << std::endl;
+	}
 }
 
-float Char::toFloat(void) const {
-	return static_cast<float>(_converted_value);
+char Conversion::toChar() {
+	
+	return static_cast<char>(toFloat());
 }
 
-double Char::toDouble(void) const {
-	return static_cast<double>(_converted_value);
+int Conversion::toInt() {
+	return static_cast<int>(toFloat());
+}
 
+float Conversion::toFloat() {
+	return atof(_value.c_str());
+}
+
+double Conversion::toDouble() {
+	return static_cast<double>(toFloat());
+}
 
 
 
