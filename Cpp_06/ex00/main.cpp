@@ -6,13 +6,13 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:10:25 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/19 22:31:59 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/20 16:35:43 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
 
-int main(int ac, char *av[])
+int main(int ac, char **av)
 {
 	if (ac == 2)
 	{

@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/17 18:54:20 by oavelar           #+#    #+#              #
-#    Updated: 2021/10/20 18:10:58 by oavelar          ###   ########.fr        #
+#    Created: 2021/10/20 18:11:10 by oavelar           #+#    #+#              #
+#    Updated: 2021/10/20 18:12:11 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = serialize
+NAME = classes
 
 ifeq ($(shell uname), Linux)
  CC = g++
