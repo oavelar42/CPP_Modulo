@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 18:11:23 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/22 22:30:07 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/23 21:59:51 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,25 @@ Base *generate(void)
     return (NULL);
 }
 
-void identify(Base *pont)
+void identify(Base *point)
 {
-    if (A == pont)
-    std::cout << pont << "pontier" << std::endl;
+    if (dynamic_cast<A *>(point))
+        std::cout << "Class A" << std::endl;
+    else if (dynamic_cast<B *>(point))
+        std::cout << "Class B" << std::endl;
+    else if (dynamic_cast<C *>(point))
+        std::cout << "Class C" << std::endl;
 }
 
 void identify(Base &ref)
 {
-    if (A == ref)
-    std::cout << ref << "reference" << std::endl;
+    Base result;
+	try
+	{
+		result = dynamic_cast<A &>(ref);
+		std::cout << "Class A" << std::endl;
+	}
+	catch (std::exception &exception){}
 }
 
 int main(void)
