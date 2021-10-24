@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 18:11:23 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/23 21:59:51 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/24 18:43:02 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ Base *generate(void)
     return (NULL);
 }
 
-void identify(Base *point)
+void identify(Base *pointer)
 {
-    if (dynamic_cast<A *>(point))
+    if (dynamic_cast<A *>(pointer))
         std::cout << "Class A" << std::endl;
-    else if (dynamic_cast<B *>(point))
+    else if (dynamic_cast<B *>(pointer))
         std::cout << "Class B" << std::endl;
-    else if (dynamic_cast<C *>(point))
+    else if (dynamic_cast<C *>(pointer))
         std::cout << "Class C" << std::endl;
 }
 
@@ -43,8 +43,23 @@ void identify(Base &ref)
     Base result;
 	try
 	{
+        A result;
 		result = dynamic_cast<A &>(ref);
 		std::cout << "Class A" << std::endl;
+	}
+	catch (std::exception &exception){}
+    try
+	{
+        B result;
+		result = dynamic_cast<B &>(ref);
+		std::cout << "Class B" << std::endl;
+	}
+	catch (std::exception &exception){}
+    try
+	{
+        C result;
+		result = dynamic_cast<C &>(ref);
+		std::cout << "Class C" << std::endl;
 	}
 	catch (std::exception &exception){}
 }
