@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:43 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/25 22:39:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/31 16:12:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,30 @@ T max(T const &i, T const &j)
 #endif
 
 
-/* 
+/*class Awesome
+{
+        public:
+
+            Awesome(void) : _n(0) {}
+            Awesome( int n ) : _n( n ) {}
+            Awesome & operator= (Awesome & a) { _n = a._n; return *this; }
+            bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+            bool operator!=( Awesome const & rhs ) const{ return (this->_n != rhs._n); }
+            bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+            bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+            bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+            bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+            int get_n() const { return _n; }
+
+        private:
+
+            int _n;
+};
+
+std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
+
+
+
 
 Os Templates de função são funções especiais que podem operar com tipos genéricos . 
 Isso nos permite criar um Template de função cuja funcionalidade pode ser adaptada 

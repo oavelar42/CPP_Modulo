@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:53 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/27 21:49:15 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/31 16:10:39 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,26 @@ int main(int, char**)
     }
 
     delete [] mirror;
+
+    // My test
+	Array<int> *ar1 = new Array<int>(10);
+	std::cout << "Array size: " << (*ar1).size() << std::endl;
+
+	(*ar1)[1] = 1;
+	(*ar1)[2] = 2;
+
+	Array<int> *ar2 = new Array<int>(10);
+
+	*ar2 = *ar1;
+    *ar1 = *ar2;
+
+	for (unsigned int i = 0; i < 10; i++)
+		std::cout << (*ar1)[i] << std::endl;
+
+	std::cout << std::endl;
+
+	for (unsigned int i = 0; i < 2; i++)
+		std::cout << (*ar2)[i] << std::endl;
     
     return 0;
 }

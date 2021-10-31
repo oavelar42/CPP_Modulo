@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:36 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/25 22:36:42 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/31 16:13:18 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,16 @@ int main( void )
         
     return 0;
 }
+
+
+
+/*
+int main(void)
+{
+    Awesome a(2), b(4);
+    swap(a, b);
+    std::cout << a << " " << b << std::endl;
+    std::cout << max(a, b) << std::endl;
+    std::cout << min(a, b) << std::endl;
+    return (0);
+}*/

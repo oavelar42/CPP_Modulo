@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:01:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/26 18:19:04 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/10/31 16:16:25 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,25 @@ void iter(T *array, int len, void func(T const &))
         func(array[i]);
 }
 
-
 #endif
+
+
+/*
+class Awesome
+{
+        public:
+
+            Awesome( void ) : _n( 42 ) { return; }
+            int get( void ) const { return this->_n; }
+
+        private:
+
+            int _n;
+
+};
+        
+        std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get(); return o; }
+        template< typename T >
+        void print( T const & x ) { std::cout << x << std::endl; return; }
+
+    */
