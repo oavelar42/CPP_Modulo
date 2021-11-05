@@ -6,13 +6,14 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:01:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/31 16:16:25 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/11/05 20:21:54 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ITER_HPP
 # define ITER_HPP
 
+# define OTA "\x1B[36m"
 # define RED "\x1B[31m"
 # define GRE "\x1B[32m"
 # define OFF "\033[0m"
@@ -35,10 +36,6 @@ void iter(T *array, int len, void func(T const &))
         func(array[i]);
 }
 
-#endif
-
-
-/*
 class Awesome
 {
         public:
@@ -56,4 +53,4 @@ class Awesome
         template< typename T >
         void print( T const & x ) { std::cout << x << std::endl; return; }
 
-    */
+#endif

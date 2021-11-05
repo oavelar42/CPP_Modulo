@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:43 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/31 16:12:48 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/11/05 20:49:27 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,7 @@ T max(T const &i, T const &j)
     return (j);
 }
 
-#endif
-
-
-/*class Awesome
+class Awesome
 {
         public:
 
@@ -77,6 +74,10 @@ T max(T const &i, T const &j)
 std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
 
 
+#endif
+
+
+/*
 
 
 Os Templates de função são funções especiais que podem operar com tipos genéricos . 
