@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:44:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/17 22:37:43 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/11/19 22:12:32 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 #include <algorithm>
 #include <exception>
 #include <vector>
-#include <deque>
 #include <list>
 #include <iterator>
 
