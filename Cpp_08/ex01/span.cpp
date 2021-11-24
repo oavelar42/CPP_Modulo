@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:46:08 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/22 17:39:44 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/11/24 19:42:33 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,45 @@ Span::~Span(void) {  }
 
 void Span::addNumber(int n)
 {
-    if (vetor.size() == _num)
+    if (this->vetor.size() == this->_num)
         throw limiterror();
     vetor.push_back(n);
 }
 
-int Span::longestSpan(void)
+unsigned int Span::longestSpan(void)
 {
-    if (this->vetor.size() < 2)
+    if (vetor.size() < 2)
         throw notnumber();
     
     std::vector<int> temp(this->vetor);
     std::sort(temp.begin(), temp.end());
 
     return (temp.back() - temp.front());
+}
+
+unsigned int		Span::shortestSpan() 
+{
+	if (vetor.size() < 2)
+		throw limiterror();
+        
+    std::vector<int>::iterator	iter = vetor.begin();
+	std::vector<int>::iterator	last = vetor.end();
+	unsigned int	shortest = UINT_MAX;
+
+	for (; iter != (last - 1); ++iter)
+    {
+		if (static_cast<unsigned int>(*(iter + 1) - *iter) < shortest)
+			shortest = *(iter + 1) - *iter;
+	}
+
+	return shortest;
+}
+
+void	Span::addVal(std::vector<int>::iterator const &begin,
+		std::vector<int>::iterator const &end)
+{
+	for (std::vector<int>::iterator iter = begin; iter < end; iter++)
+		this->addNumber(*iter);
 }
 
 const char* Span::limiterror::what(void) const throw ()

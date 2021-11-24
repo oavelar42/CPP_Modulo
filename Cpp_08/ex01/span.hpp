@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:45:46 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/22 17:32:01 by oavelar          ###   ########.fr       */
+/*   Updated: 2021/11/24 19:46:48 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <stdexcept>
+# include <climits>
+
 
 class Span
 {
     private : 
             unsigned int _num;
+            unsigned int val;
             std::vector<int> vetor;
 
     public :
@@ -35,8 +39,20 @@ class Span
             Span &operator=(const Span &copy);
             ~Span(void);
 
-            void addNumber(int n);
-            int	longestSpan(void);
+            void            addNumber(int n);
+            unsigned int	shortestSpan(void);
+            unsigned int	longestSpan(void);
+            void	        addVal(const std::vector<int>::iterator & first,
+				const std::vector<int>::iterator & last);
+
+            template <typename Iterator> 
+            void    addNumber(Iterator begin, Iterator end)
+            {
+                for (; begin < end && val < _num; ++begin){
+                    vetor.push_back(*begin);
+                    val++;
+                }
+            };
 
     class limiterror : public std::exception
     {
