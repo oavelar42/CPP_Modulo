@@ -6,11 +6,11 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 16:35:01 by oavelar           #+#    #+#              #
-#    Updated: 2021/11/17 16:35:42 by oavelar          ###   ########.fr        #
+#    Updated: 2021/11/27 18:36:22 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mutanstack
+NAME = mutantstack
 
 ifeq ($(shell uname), Linux)
  CC = g++
@@ -19,7 +19,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILE = main.cpp mutanstack.cpp
+FILE = main.cpp mutantstack.cpp
 
 OBJ = .o
 
