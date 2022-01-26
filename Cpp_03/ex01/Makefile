@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/17 18:23:57 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/21 18:29:36 by oavelar          ###   ########.fr        #
+#    Updated: 2022/01/24 19:04:27 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ ifeq ($(shell uname), Linux)
 else
  CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow -fsanitize=address
 
 FILE = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = .o

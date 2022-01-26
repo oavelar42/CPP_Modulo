@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 16:32:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/03 17:10:42 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/24 21:21:08 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,21 @@ MateriaSource::MateriaSource(void) { }
 MateriaSource::MateriaSource(const MateriaSource& copy)
 {
 	for (int i = 0; i < 4; i++)
-		this->_materia[i] = copy._materia[i]->clone();
+		this->_materia[i] = copy._materia[i];
 }
 
 MateriaSource&	MateriaSource::operator=(MateriaSource const& copy) 
 {
 	if (this == &copy)
 		return *(this);
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materia[i])
+			delete this->_materia[i];
+	}
 	for (int i = 0; i < 4; i++) {
 		if (copy._materia[i])
-			_materia[i] = copy._materia[i];
+			this->_materia[i] = copy._materia[i];
 	}
 	return (*this);
 }
@@ -45,13 +50,13 @@ void MateriaSource::learnMateria(AMateria* m)
 		}
 	}
 }
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria* MateriaSource::createMateria(const std::string& type)
 {
 	if (type != "ice" && type != "cure")
 		return 0;
 	for (int i = 0; i < 4; i++)
-		if (_materia[i] && !_materia[i]->getType().compare(type))
-			return _materia[i]->clone();
+		if (_materia[i] && _materia[i]->getType() == type)
+			return (_materia[i]);
 	//std::cout << "Materia " << type << " preciso do output do subject" << std::endl;
 	return 0;
 }

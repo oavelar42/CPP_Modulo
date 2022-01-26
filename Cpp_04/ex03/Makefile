@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/29 16:43:49 by oavelar           #+#    #+#              #
-#    Updated: 2021/09/30 21:44:32 by oavelar          ###   ########.fr        #
+#    Updated: 2022/01/24 21:14:32 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ ifeq ($(shell uname), Linux)
 else
  CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
+FLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98 -fsanitize=address
 
 FILE = main.cpp Cure.cpp Ice.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 OBJ = .o

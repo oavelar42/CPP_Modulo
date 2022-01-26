@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:01:01 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/05 20:25:12 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/24 18:57:30 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-    int num[] = {'*', 2, 0, 2, 1};
+    int num[7] = {'*', 2, 0, 2, 1};
     std::cout << RED "Array Number :" OFF << std::endl;
     iter(num, 6, print);
 

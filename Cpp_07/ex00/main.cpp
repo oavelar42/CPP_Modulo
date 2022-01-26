@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:36 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/05 20:51:00 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/24 18:49:52 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main( void )
         std::cout << "max( a, b ) = " << ::max( a, b ) << " . " OFF << std::endl;
         std::cout << "\n";  
 
-    std::string c = "chaine1";
-    std::string d = "chaine2";
+    std::string c = " string1";
+    std::string d = "string2";
        
     ::swap(c, d);
         std::cout << RED "c = " << c << ", d = " << d << std::endl;
