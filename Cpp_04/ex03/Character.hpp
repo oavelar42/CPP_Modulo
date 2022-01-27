@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:13:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/03 17:10:19 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 13:58:47 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Character : public ICharacter
         private:
         
                 std::string name_c;
-                AMateria* _materia[4];
+                AMateria* _materia[num];
                 
         public:
 

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:58:52 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 16:31:55 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 21:44:56 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,21 @@
 Animal::Animal(void)
 {
     std::cout << "Animal constructor created" << std::endl;
-    type = "Empty";
+    return ;
 }
 
 Animal::Animal(Animal const& copy)
 {
     std::cout << "Animal copy created" << std::endl;
     *this = copy;
+    return ;
 }
 
 Animal& Animal::operator=(Animal const& copy) 
 {
-    type = copy.getType(); 
-    return (*this);
+    //this->type = copy.type; 
+    (void)copy;
+    return *this;
 }
 
 Animal::~Animal(void)
@@ -38,9 +40,4 @@ Animal::~Animal(void)
 std::string Animal::getType(void) const
 {
     return (type);
-}
-
-void Animal::makeSound(void) const 
-{
-    std::cout << "Quiet now" << std::endl;
 }

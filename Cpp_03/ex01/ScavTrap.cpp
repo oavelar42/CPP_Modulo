@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 22:45:57 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/21 18:17:44 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 18:26:45 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,13 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
 ScavTrap::~ScavTrap(void)
 {
     std::cout << "ScavTrap destructor is called " << std::endl;
+}
+
+void ScavTrap::attack(std::string const& target)
+{
+    std::cout << "ScavTrap " << name << "attack " << target 
+                << ", almost " << attack_dmg << " kill BTC!" 
+                << std::endl;
 }
 
 void ScavTrap::guardGate(void) {

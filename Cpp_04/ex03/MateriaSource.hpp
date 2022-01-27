@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 16:32:02 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/03 17:08:38 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 14:12:31 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class MateriaSource: public IMateriaSource
 {
         private:
 
-                AMateria* _materia[4];
+                AMateria* _materia[num];
 
         public:
 

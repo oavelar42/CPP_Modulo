@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 22:45:52 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 16:19:00 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 15:16:29 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class ScavTrap: virtual public ClapTrap
         ScavTrap(const ScavTrap& copy);
         ~ScavTrap(void);
         ScavTrap& operator=(const ScavTrap& value);
+        void	attack(std::string const& target);
         void    guardGate();
 };
 

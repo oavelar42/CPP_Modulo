@@ -6,39 +6,65 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:13:02 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/24 21:13:16 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 14:48:35 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(void) {  }
+Character::Character(void)
+{  
+	name_c = "";
+	for (int i = 0; i < num; i++)
+		_materia[i] = NULL;
+}
 
 Character::Character(std::string const & name)
 {
 	name_c = name;
+	for (int i = 0; i < num; i++)
+		_materia[i] = NULL;
 }
 
 Character::Character(const Character& copy)
 {
-    *this = copy;
+    name_c = copy.name_c;
+	for (int i = 0; i < num; i++)
+	{
+		if (_materia[i])
+		{
+			delete _materia[i];
+			_materia[i] = NULL;
+		}
+		if (copy._materia[i])
+			_materia[i] = copy._materia[i]->clone();
+	}
 }
 
 Character& Character::operator=(const Character& copy)
 {
-	if (this != &copy)
-    {
-		name_c = copy.name_c;
-		for (int i = 0; i < 4; i++)
-			_materia[i] = copy._materia[i];
+	name_c = copy.name_c;
+	for (int i = 0; i < num; i++)
+	{
+		if (_materia[i])
+		{
+			delete _materia[i];
+			_materia[i] = NULL;
+		}
+		if (copy._materia[i])
+			_materia[i] = copy._materia[i]->clone();
 	}
-	return *this;
+	return (*this);
 }
 
-Character::~Character(void) {  }
+Character::~Character(void) 
+{ 
+	for (int i = 0; i < num; i++)
+		delete _materia[i];
+}
 
 std::string const & Character::getName() const{
-	return this->name_c;
+	return (name_c);
 }
 
 void Character::equip(AMateria* m)
@@ -61,6 +87,6 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	if (idx >= 0 && idx < 4 && _materia[idx] != NULL)
+	if (idx >= 0 && idx < num && _materia[idx])
 		_materia[idx]->use(target);
 }

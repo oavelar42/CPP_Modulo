@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 22:56:47 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/29 16:24:31 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 15:38:16 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,16 @@
 
 class Brain
 {
-    public :
+    private :
+
             std::string ideias[100];
+
+    public :
 
             Brain(void);
             Brain(Brain const& copy);
             Brain& operator=(Brain const& copy);
-            ~Brain(void);     
+            virtual ~Brain(void);     
 };
 
 #endif

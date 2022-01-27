@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:28 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/28 21:57:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 21:42:10 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ class Dog : public Animal
 
     public :
             Dog(void);
-            Dog(Dog const& copy);
-            Dog& operator=(Dog const& copy);
-            virtual ~Dog(void);
+            Dog(Dog const& obj);
+            Dog& operator=(Dog const& obj);
+            ~Dog(void);
 
             virtual void makeSound(void) const;
 };

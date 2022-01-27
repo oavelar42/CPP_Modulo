@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:29:09 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/30 15:33:55 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/27 15:08:34 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ICharacter
 {
     public :
 
-            virtual ~ICharacter(void) {  }
+            virtual ~ICharacter() {  }
             virtual std::string const& getName() const = 0;
             virtual void equip(AMateria* m) = 0;
             virtual void unequip(int idx) = 0;
