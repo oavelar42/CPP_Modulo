@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:10:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/06 22:08:50 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:58:33 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ void PresidentialPardonForm::execute(Bureaucrat const& executor) const
     if (getGradeExec() < executor.getGrade())
         throw GradeTooLowException();
     else 
-        std::cout << _target << " has been pardoned by Zafod Beeblebrox." <<std::endl;
+        std::cout << "" OTA << _target << OFF " has been pardoned by Zafod Beeblebrox." <<std::endl;
 }

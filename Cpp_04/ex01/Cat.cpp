@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:35 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/28 21:29:41 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 14:18:10 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,12 @@ Cat& Cat::operator=(Cat const& copy)
 {
     Animal::operator=(copy);
     type = copy.type;
-    *brain = *copy.brain;
     return (*this);
 }
 
 Cat::~Cat(void)
 {
     std::cout << "Cat destructor called" << std::endl;
-    delete brain;
 }
 
 void Cat::makeSound(void) const

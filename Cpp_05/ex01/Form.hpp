@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 17:46:26 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 19:49:36 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 11:18:59 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ class Form
 
         private :
 
-                std::string _name;
+                const std::string _name;
                 int const _sign;
                 int const _execute;
                 bool _isSigned;

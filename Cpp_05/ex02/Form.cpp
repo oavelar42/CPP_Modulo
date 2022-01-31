@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 17:47:10 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 20:21:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:13:50 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ int	        Form::getState(void) const
 /* ************************************************************************** */
 
 
-void Form::beSigned(Bureaucrat* f)
+void Form::beSigned(const Bureaucrat& f)
 {
-    if (_sign < f->getGrade())
+    if (_sign < f.getGrade())
         throw GradeTooLowException();
 	else
 		_isSigned = true;

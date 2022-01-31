@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:21 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/28 22:20:35 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 14:46:41 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,13 @@ int main( void )
 		delete animal[i];
 
 		std::cout << std::endl;
+	}
+
+	std::cout <<"\n-------------DEEP COPY-------------\n" << std::endl;
+	
+	Dog a;
+	{
+		Dog b = a;
 	}
 
     return (0);

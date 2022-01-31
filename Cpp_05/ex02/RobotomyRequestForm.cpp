@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:10:15 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/06 22:16:11 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:56:59 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void    RobotomyRequestForm::execute(Bureaucrat const& executor) const
     if (getGradeExec() < executor.getGrade())
         throw GradeTooLowException();
     else
-        std::cout << "XIIIIIIIII " << _target << " has been robotomized successfully 50\% of the time" 
+        std::cout << "XIIIIIIIII " OTA << _target << OFF " has been robotomized successfully 50\% of the time" 
                                     << std::endl;
 }

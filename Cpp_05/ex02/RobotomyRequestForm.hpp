@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 17:07:06 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/06 22:12:28 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 13:33:54 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <string>
 # include <iostream>
 
-class RobotomyRequestForm : public Form {
+class RobotomyRequestForm : public Form 
+{
 
 	public:
 
@@ -27,7 +28,7 @@ class RobotomyRequestForm : public Form {
 			RobotomyRequestForm& operator=(RobotomyRequestForm const& copy);
 			~RobotomyRequestForm(void);
 
-			void execute(Bureaucrat const& executor) const;
+			virtual void execute(Bureaucrat const& executor) const;
 
 	private:
 

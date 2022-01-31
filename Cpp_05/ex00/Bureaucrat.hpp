@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:33 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/04 17:21:36 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 11:01:25 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,34 +25,34 @@
 
 class Bureaucrat
 {
-    public:
-    
-            Bureaucrat(void);
-            Bureaucrat(std::string const& name, int grade);
-            Bureaucrat(Bureaucrat const& copy);
-            Bureaucrat& operator=(Bureaucrat const& copy);
-            ~Bureaucrat(void);
+		public:
+		
+				Bureaucrat(void);
+				Bureaucrat(std::string const& name, int grade);
+				Bureaucrat(Bureaucrat const& copy);
+				Bureaucrat& operator=(Bureaucrat const& copy);
+				~Bureaucrat(void);
 
-            std::string const& getName(void) const;
-            int getGrade(void) const;
+				std::string const& getName(void) const;
+				int getGrade(void) const;
 
-            void increment(void);
-            void decrement(void);
+				void increment(void);
+				void decrement(void);
 
-            class GradeTooHighException : public std::exception {
+				class GradeTooHighException : public std::exception {
 			public:
 				const char* what(void) const throw ();
-		    };
+				};
 
-		    class GradeTooLowException : public std::exception {
+				class GradeTooLowException : public std::exception {
 			public:
 				const char* what(void) const throw ();
-		    };
+				};
 
-    private :
+		private :
 
-            std::string const _name;
-            int    _grade;
+						std::string const _name;
+						int    _grade;
 
 };
 

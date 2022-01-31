@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:33 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/05 18:51:33 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 13:54:50 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ class Bureaucrat
 
             void increment(void);
             void decrement(void);
-            void signForm(Form* form);
+            void signForm(Form& form) const;
+            void executeForm(Form const & form);
 
     class GradeTooHighException : virtual public std::exception
 	{

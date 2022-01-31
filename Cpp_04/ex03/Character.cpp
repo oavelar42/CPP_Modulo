@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:13:02 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/27 14:48:35 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 15:15:13 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 Character::Character(void)
 {  
 	name_c = "";
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 		_materia[i] = NULL;
 }
 
 Character::Character(std::string const & name)
 {
 	name_c = name;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 		_materia[i] = NULL;
 }
 
 Character::Character(const Character& copy)
 {
     name_c = copy.name_c;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i])
 		{
@@ -44,7 +44,7 @@ Character::Character(const Character& copy)
 Character& Character::operator=(const Character& copy)
 {
 	name_c = copy.name_c;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i])
 		{
@@ -59,7 +59,7 @@ Character& Character::operator=(const Character& copy)
 
 Character::~Character(void) 
 { 
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 		delete _materia[i];
 }
 
@@ -87,6 +87,6 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	if (idx >= 0 && idx < num && _materia[idx])
+	if (idx >= 0 && idx < 4 && _materia[idx])
 		_materia[idx]->use(target);
 }

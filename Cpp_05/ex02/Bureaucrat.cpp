@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:29 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/10 17:16:03 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:12:21 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,16 +92,30 @@ std::ostream& operator<<(std::ostream& output, const Bureaucrat& bureau)
     return (output);
 }
 
-void Bureaucrat::signForm(Form* form) 
+void Bureaucrat::signForm(Form& form) const
 {
 	try 
     {
-		form->beSigned(this);
-		std::cout << _name << " signed " << form->getName() << std::endl;
+		form.beSigned(*this);
+		std::cout << getName() << " signed " << form.getName() << std::endl;
 	} 
     catch (std::exception& e) 
     {
-		std::cout << _name << ", can't signed " << form->getName()
-		<< " because at least grade " << form->getGradeSign() << " needed." << std::endl;
+		std::cout << getName() << ", can't signed " << form.getName()
+		<< " because at least grade " << form.getGradeSign() << " needed." << std::endl;
 	}
+}
+
+void Bureaucrat::executeForm(Form const & form) {
+    try
+    {
+        form.execute(*this);
+        std::cout << getName() << RED " executes " OFF << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << getName() << RED " cannot execute " OFF << form.getName()
+            << " " <<  e.what() << std::endl;
+    }
+    
 }

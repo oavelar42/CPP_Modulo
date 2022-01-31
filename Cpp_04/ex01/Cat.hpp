@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:31 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/28 21:57:53 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 14:02:59 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Cat : public Animal
     public :
             Cat(void);
             Cat(Cat const& copy);
-            Cat& operator=(Cat const& copy);
+            virtual Cat& operator=(Cat const& copy);
             virtual ~Cat(void);
             
             virtual void makeSound(void) const;

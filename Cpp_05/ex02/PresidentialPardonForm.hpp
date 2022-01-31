@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 17:07:06 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/06 16:25:29 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 13:33:25 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class PresidentialPardonForm : public Form
 			~PresidentialPardonForm(void);
 
 			virtual void execute(Bureaucrat const & executor) const;
-
 
 	private:
 

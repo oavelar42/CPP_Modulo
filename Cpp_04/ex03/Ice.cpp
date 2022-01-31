@@ -6,10 +6,9 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 16:44:25 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/03 16:54:51 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 15:25:55 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Ice.hpp"
 
@@ -33,6 +32,7 @@ AMateria* Ice::clone() const
 {
 	return new Ice();
 }
+
 void	Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName()

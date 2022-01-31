@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 16:32:05 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/27 14:48:54 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/28 15:17:37 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 MateriaSource::MateriaSource(void) 
 {
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 		_materia[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& copy)
 {
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i])
 		{
@@ -33,7 +33,7 @@ MateriaSource::MateriaSource(const MateriaSource& copy)
 
 MateriaSource&	MateriaSource::operator=(MateriaSource const& copy) 
 {
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i])
 		{
@@ -47,7 +47,7 @@ MateriaSource&	MateriaSource::operator=(MateriaSource const& copy)
 
 MateriaSource::~MateriaSource(void) 
 {
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i])
 		{
@@ -61,7 +61,7 @@ void MateriaSource::learnMateria(AMateria* m)
 {
 	if (!m)
 		return ;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (!_materia[i])
 		{
@@ -74,7 +74,7 @@ AMateria* MateriaSource::createMateria(const std::string& type)
 {
 	if (type != "ice" && type != "cure")
 		return 0;
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_materia[i] && _materia[i]->getType() == type)
 			return (_materia[i]->clone());
