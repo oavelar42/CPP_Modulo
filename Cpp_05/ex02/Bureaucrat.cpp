@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:29 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/31 14:12:21 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 20:58:35 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ Bureaucrat::~Bureaucrat(void) {  }
 
 void Bureaucrat::increment(void)
 {
-    if (_grade < 2)
+    if (_grade < 1)
         throw Bureaucrat::GradeTooHighException();
     _grade--;
 }
 
 void Bureaucrat::decrement(void)
 {
-    if (_grade > 149)
+    if (_grade > 150)
         throw Bureaucrat::GradeTooLowException();
     _grade++;
 }

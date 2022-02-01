@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 17:46:26 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/31 14:14:05 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 20:25:06 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form
                 Form(std::string const& name, int sign, int execute);
                 Form(Form const& copy);
                 Form& operator=(Form const& copy);
-                ~Form(void);
+                virtual ~Form(void);
 
                 std::string getName(void) const;
                 int getGradeSign(void) const;

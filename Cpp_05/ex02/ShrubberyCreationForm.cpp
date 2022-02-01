@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 20:12:05 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/31 14:41:45 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 21:02:29 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
     file.open((_target + "_shrubbery").c_str());
    std::cout << OTA "Barney" OFF << " the tree is ready." << std::endl;
    
- file <<"        _#_          " << std::endl
+ file <<TREE "        _#_          " << std::endl
     <<"       // \\)         " << std::endl
     <<"      // @ \\)        " << std::endl
     <<"     //     \\)       " << std::endl
@@ -55,6 +55,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const& executor) const
     <<"        |=|          " << std::endl
     <<"        |=|          " << std::endl
     <<"        |=|          " << std::endl
-    <<"   ¨¨¨¨¨¨¨¨¨¨¨¨¨     " << std::endl;
+    <<"   ¨¨¨¨¨¨¨¨¨¨¨¨¨ ott    " OFF << std::endl;
 
 }

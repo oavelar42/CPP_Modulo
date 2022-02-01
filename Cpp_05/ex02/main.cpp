@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:14:37 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/31 15:25:53 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/01/31 20:25:41 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,10 @@ int main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+
+	delete one;
+	delete two;
+	delete three;
 
     return (0);
 }
