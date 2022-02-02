@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:58:52 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 21:41:06 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/02 14:21:25 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Animal::Animal(void)
     type = "Empty";
 }
 
-Animal::Animal(Animal const& copy)
+Animal::Animal(Animal const& copy) 
 {
     std::cout << "Animal copy created" << std::endl;
     *this = copy;
@@ -26,7 +26,7 @@ Animal::Animal(Animal const& copy)
 
 Animal& Animal::operator=(Animal const& copy) 
 {
-    type = copy.getType();   //maybe copy.type 
+    type = copy.getType();  
     return (*this);
 }
 

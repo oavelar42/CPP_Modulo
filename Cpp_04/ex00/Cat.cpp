@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:35 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/28 14:35:04 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/02 14:12:03 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(void)
     type = "Cat";
 }
 
-Cat::Cat(Cat const& copy)
+Cat::Cat(Cat const& copy) : Animal(copy)
 {
     std::cout << "Copy Cat constructor created" << std::endl;
     *this = copy;

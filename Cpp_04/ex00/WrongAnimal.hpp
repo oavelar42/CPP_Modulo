@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Wrong.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:58:58 by oavelar           #+#    #+#             */
-/*   Updated: 2021/09/27 22:34:18 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/02 13:44:54 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONG_HPP
-# define WRONG_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # define OTA "\x1B[36m"
 # define RED "\x1B[31m"
@@ -34,18 +34,6 @@ class WrongAnimal
 
             std::string getType(void) const;
             void makeSound(void) const;
-
-};
-
-class WrongCat : public WrongAnimal
-{
-    public :
-            WrongCat(void);
-            WrongCat(WrongCat const& copy);
-            WrongCat& operator=(WrongCat const& copy);
-            virtual ~WrongCat(void);
-
-            virtual void makeSound(void) const;
 
 };
 

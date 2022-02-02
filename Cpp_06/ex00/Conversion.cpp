@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:14:26 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/01 12:10:29 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/01 15:55:14 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Conversion::Conversion(const std::string input) : _input(input)
 		if (_input.length() == 1)
 			_value = static_cast<double>(*(_input.c_str()));
 		else
-			_input = "none";		
+			_input = "nan";		
 	}
 	else
 		_value = atof(_input.c_str());

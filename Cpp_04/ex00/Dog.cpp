@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:22:24 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/28 14:35:08 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/02 14:12:24 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog(void)
     type = "Dog";
 }
 
-Dog::Dog(Dog const& copy)
+Dog::Dog(Dog const& copy) : Animal(copy)
 {
     std::cout << "Copy Dog constructor created" << std::endl;
     *this = copy;

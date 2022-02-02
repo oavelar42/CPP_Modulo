@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 16:21:42 by oavelar           #+#    #+#              #
-#    Updated: 2022/01/24 19:04:49 by oavelar          ###   ########.fr        #
+#    Updated: 2022/02/02 13:41:22 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ else
 endif
 FLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
-FILE = main.cpp Cat.cpp Dog.cpp Animal.cpp Wrong.cpp
+FILE = main.cpp Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = .o
 
 OK			= [\033[32mOK\033[0m]
