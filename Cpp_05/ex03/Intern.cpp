@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:02:14 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/11 20:54:06 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/16 15:30:55 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,44 @@ Intern::Intern(Intern const& copy)
     *this = copy;
 }
 
-Intern& Intern::operator=(Intern const& copy)
+Form* Intern::createShrubberyCreationForm(const std::string &target)
 {
-    (void)copy;
-    return (*this);
+	return new ShrubberyCreationForm(target);
 }
 
-Intern::~Intern(void) {  }
-
-Form*   Intern::makeForm(std::string const & name, std::string const & target)
+Form* Intern::createRobotomyRequestForm(const std::string &target)
 {
-    Form    *form[3] = {new PresidentialPardonForm(target),
-                        new RobotomyRequestForm(target),
-                        new ShrubberyCreationForm(target)};
-
-    for (int i = 0; i < 3; i++)
-    {
-        if (name.compare(form[i]->getName()) == 0)
-        {
-            std::cout << "Intern create " << *form[i] << std::endl;
-            return (form[i]);
-        }
-        delete form[i];
-    }
-    std::cout << name << " because nothing was found!" << std::endl;
-    return (0);
+	return new RobotomyRequestForm(target);
 }
+
+Form* Intern::createPresidentialPardonForm(const std::string &target)
+{
+	return new PresidentialPardonForm(target);
+}
+
+Intern &Intern::operator=(const Intern &copy)
+{
+	if (this != &copy)
+	{
+		*this = copy;
+	}
+	return *this;
+}
+
+Intern::~Intern() { }
+
+Form *Intern::makeForm(std::string name, std::string target)
+{
+	const std::string str[] = {"shrubbery creation", "robotomy request", "presidential pardon"};
+	action actions[] = { &Intern::createShrubberyCreationForm, &Intern::createRobotomyRequestForm, &Intern::createPresidentialPardonForm};
+
+	for (int i = 0; i < 3; i++) {
+		if (name == str[i]) {
+			std::cout << "Intern creates " << name << std::endl;
+			return (this->*actions[i])(target);
+		}
+	}
+	std::cout << "Intern makeForm invalid because nothing was found!" << std::endl;
+	return NULL;
+}
+
