@@ -6,7 +6,7 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 17:14:41 by oavelar           #+#    #+#              #
-#    Updated: 2022/01/24 19:05:21 by oavelar          ###   ########.fr        #
+#    Updated: 2022/02/16 17:33:17 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ ifeq ($(shell uname), Linux)
 else
  CC = clang++
 endif
-FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -g -fsanitize=address
 
 FILE = main.cpp Bureaucrat.cpp
 OBJ = .o
