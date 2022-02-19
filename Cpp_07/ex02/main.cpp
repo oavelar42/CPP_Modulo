@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:53 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/31 16:10:39 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/19 23:30:22 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(int, char**)
 {
+    std::cout << "\n----------- Subject test -----------\n" << std::endl;
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -22,7 +23,7 @@ int main(int, char**)
     {
         const int value = rand();
         numbers[i] = value;
-        mirror[i] = value;
+        mirror[i] = value;  
     }
     //SCOPE
     {
@@ -42,9 +43,10 @@ int main(int, char**)
     {
         numbers[-2] = 0;
     }
+      
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+       std::cerr << e.what() << '\n';
     }
     try
     {
@@ -58,99 +60,49 @@ int main(int, char**)
     for (int i = 0; i < MAX_VAL; i++)
     {
         numbers[i] = rand();
+        //std::cout << "Numbers random: " << i << std::endl;
     }
 
     delete [] mirror;
 
-    // My test
-	Array<int> *ar1 = new Array<int>(10);
-	std::cout << "Array size: " << (*ar1).size() << std::endl;
-
-	(*ar1)[1] = 1;
-	(*ar1)[2] = 2;
-
-	Array<int> *ar2 = new Array<int>(10);
-
-	*ar2 = *ar1;
-    *ar1 = *ar2;
-
-	for (unsigned int i = 0; i < 10; i++)
-		std::cout << (*ar1)[i] << std::endl;
-
-	std::cout << std::endl;
-
-	for (unsigned int i = 0; i < 2; i++)
-		std::cout << (*ar2)[i] << std::endl;
-    
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-/*
-int         main(void)
-{
-    Array<int>	arr(4);
-
-    int * a = new int();
-
-    std::cout << "zero" << std::endl;
-    std::cout << *a << std::endl;
-
-	std::cout << std::endl;
-    try {
-	    for (unsigned int i = 0; i < arr.size(); ++i)
-		    std::cout << "1. " << i << " | " << arr[i] << std::endl;
-    }
-    catch (std::exception &e){
-        std::cout << e.what() << std::endl;
-    }
-    std::cout << "size: " << arr.size() << std::endl;
-	std::cout << std::endl;
-    
-    
-    std::cout << "int" << std::endl;
-	for (unsigned int i = 0; i < arr.size(); ++i)
+    //my test
+	std::cout << "\n------------ My test -------------\n" << std::endl;
 	{
-        arr[i] = 21 * (i % 4);
-		std::cout << "2. " << arr[i] << std::endl;
+		std::cout << "\n-------- 1. int test ---------\n" << std::endl;
+		Array<int> num(10);
+		for (unsigned int i = 0; i < num.size(); i++)
+			num[i] = i;
+		for (unsigned int i = 0; i < num.size(); i++)
+			std::cout << num[i] << ' ';
+		std::cout << std::endl;
 	}
-	std::cout << "size: " << arr.size() << std::endl << std::endl;
-
-
-
-    std::cout << "float" << std::endl;
-    Array<float>    floats(7);
-    for (int i = 0; i < 7; ++i){
-        floats[i] = 1.0 / (i + 2);
-	    std::cout << floats[i] << std::endl;
-    }
-	std::cout << "size: " << floats.size() << std::endl << std::endl;
-
-    
-    Array<std::string> str(5);
-    str[0] = "42";
-    str[1] = " the";
-    str[2] = " best";
-    str[3] = " school";
-    str[4] = " in the world";
-    try {
-        str[5]= "test";
-        str[-4]= "test";
-    }
-    catch (const std::out_of_range& e){
-        std::cout << e.what() << std::endl;
-    }
-    std::cout << std::endl << str[0] << str[1] << str[2] << str[3] << std::endl;
-	std::cout << "size: " << str.size() << std::endl << std::endl;
-
-    system("leaks Array | grep bytes");
-    return 0;
-}*/
+	{
+		std::cout << "\n-------- 2. char test --------\n" << std::endl;
+		Array<char> let(10);
+		for (unsigned int i = 0; i < let.size(); i++)
+			let[i] = i + 65;
+		for (unsigned int i = 0; i < let.size(); i++)
+			std::cout << let[i] << ' ';
+		std::cout << std::endl;
+	}
+	std::cout << "\n-------------- Copy test --------------\n" << std::endl;
+	{
+		Array<int> num(10);
+		for (unsigned int i = 0; i < num.size(); i++)
+			num[i] = i;
+		std::cout << " Int array test : ";
+		for (unsigned int i = 0; i < num.size(); i++)
+			std::cout << num[i] << ' ';
+		std::cout << std::endl;
+		std::cout << " Copy test : ";
+		Array<int> CopyArray(num);
+		CopyArray[4] = 42;
+		for (unsigned int i = 0; i < CopyArray.size(); i++)
+			std::cout << CopyArray[i] << ' ';
+		std::cout << std::endl;
+		std::cout << " Int array test2 : ";
+		for (unsigned int i = 0; i < num.size(); i++)
+			std::cout << num[i] << ' ';
+		std::cout << std::endl;
+	}
+}

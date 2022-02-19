@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:57 by oavelar           #+#    #+#             */
-/*   Updated: 2021/10/27 21:49:22 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/19 22:56:38 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,27 @@ class Array
 
     public :
 
-        Array(void) { };
+        Array(void);
         Array(const Array& copy);
         Array(unsigned int val);
-        ~Array(void) { };
+        ~Array(void);
         Array<T>& operator=(const Array<T> &copy);
         T& operator [] (unsigned int count);
         unsigned int size(void) const;      
 };
+
+template<class T>
+Array<T>::Array(void)
+{
+    _array = new T;
+	_len = 0;
+}
+
+template<class T>
+Array<T>::~Array() 
+{
+    delete[] _array;
+}
 
 template<class T>
 Array<T>::Array(unsigned int val) : _len(val)
@@ -49,26 +62,35 @@ Array<T>::Array(unsigned int val) : _len(val)
 }
 
 template<class T>
-Array<T>::Array(const Array &copy) : _len(copy.size())
+Array<T>::Array(const Array<T> &copy) : _array(0), _len(0)
 {
-    _array = new T[_len];
-    for(unsigned int i = 0; i < _len; i++)
-        _array[i] = copy._array[i];
+    *this = copy;
 }
 
 template<class T>
 Array<T>& Array<T>::operator=(const Array<T> &copy)
 {
-    _len = copy.size();
-    delete[] _array;
-    _array = new T[_len];
-    for(unsigned int i = 0; i < _len; i++)
-        _array[i] = copy._array[i];
-    return (*this);
+    if (this == &copy)
+    {
+		return *this;
+	}
+	delete[] _array;
+	_len = 0;
+	_array = 0;
+	if (copy._len)
+    {
+		_array = new T[copy._len];
+	}
+	for (unsigned int i = 0; i < copy._len; i++)
+    {
+		_array[i] = copy._array[i];
+	}
+	_len = copy._len;
+	return *this;
 }
 
 template<class T>
-T& Array<T>::operator [] (unsigned int count)
+T& Array<T>::operator[](unsigned int count)
 {
     if (count >= _len)
         throw std::exception();
@@ -77,10 +99,9 @@ T& Array<T>::operator [] (unsigned int count)
 }
 
 template<class T>
-unsigned int Array<T>::size(void) const
+unsigned int Array<T>::size() const
 {
     return (_len);
 }
-
 
 #endif

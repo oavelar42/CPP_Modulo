@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:14:26 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/01 15:55:14 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/19 01:57:44 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ Conversion::Conversion(const std::string input) : _input(input)
 	if (!(isdigit(*(_input.c_str()))))
 	{
 		if (_input.length() == 1)
+		{
 			_value = static_cast<double>(*(_input.c_str()));
+			if (_value == "-0" && strcmp(_value = atof(_input.c_str())))
+				_value = static_cast<double>(*(_input.c_str()));
+			else
+				_input = "nan";		
+		}
 		else
-			_input = "nan";		
+			_value = atof(_input.c_str());
 	}
-	else
-		_value = atof(_input.c_str());
 }
 
 Conversion::Conversion(const Conversion &copy) 
