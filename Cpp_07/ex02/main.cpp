@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:53 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/19 23:30:22 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:04:01 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int main(int, char**)
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        
     }
 
     for (int i = 0; i < MAX_VAL; i++)
@@ -66,9 +67,9 @@ int main(int, char**)
     delete [] mirror;
 
     //my test
-	std::cout << "\n------------ My test -------------\n" << std::endl;
+	std::cout << "\n--------- My test ---------\n" << std::endl;
 	{
-		std::cout << "\n-------- 1. int test ---------\n" << std::endl;
+		std::cout << "\n--------- int test --------\n" << std::endl;
 		Array<int> num(10);
 		for (unsigned int i = 0; i < num.size(); i++)
 			num[i] = i;
@@ -76,8 +77,9 @@ int main(int, char**)
 			std::cout << num[i] << ' ';
 		std::cout << std::endl;
 	}
+
 	{
-		std::cout << "\n-------- 2. char test --------\n" << std::endl;
+		std::cout << "\n-------- char test --------\n" << std::endl;
 		Array<char> let(10);
 		for (unsigned int i = 0; i < let.size(); i++)
 			let[i] = i + 65;
@@ -85,7 +87,8 @@ int main(int, char**)
 			std::cout << let[i] << ' ';
 		std::cout << std::endl;
 	}
-	std::cout << "\n-------------- Copy test --------------\n" << std::endl;
+
+	std::cout << "\n------------ Copy test ------------\n" << std::endl;
 	{
 		Array<int> num(10);
 		for (unsigned int i = 0; i < num.size(); i++)
@@ -94,13 +97,15 @@ int main(int, char**)
 		for (unsigned int i = 0; i < num.size(); i++)
 			std::cout << num[i] << ' ';
 		std::cout << std::endl;
-		std::cout << " Copy test : ";
+		
+        std::cout << " Copy test : ";
 		Array<int> CopyArray(num);
 		CopyArray[4] = 42;
 		for (unsigned int i = 0; i < CopyArray.size(); i++)
 			std::cout << CopyArray[i] << ' ';
 		std::cout << std::endl;
-		std::cout << " Int array test2 : ";
+		
+        std::cout << " Int array test2 : ";
 		for (unsigned int i = 0; i < num.size(); i++)
 			std::cout << num[i] << ' ';
 		std::cout << std::endl;
