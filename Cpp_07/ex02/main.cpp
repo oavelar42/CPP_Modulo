@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:53 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/21 15:04:01 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/21 18:10:19 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,12 @@ int main(int, char**)
 			std::cout << CopyArray[i] << ' ';
 		std::cout << std::endl;
 		
-        std::cout << " Int array test2 : ";
-		for (unsigned int i = 0; i < num.size(); i++)
-			std::cout << num[i] << ' ';
+        Array<int> emptyArray(0);
+        for (unsigned int i = 0; i < emptyArray.size(); i++)
+            emptyArray[i] = i;
+        std::cout << " Empty test : ";
+		for (unsigned int i = 0; i < emptyArray.size(); i++)
+			std::cout << emptyArray[i] << ' ';
 		std::cout << std::endl;
 	}
 }
