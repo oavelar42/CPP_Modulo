@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:46:22 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/24 19:45:11 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 16:51:04 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int main(void)
 		std::cout << "Shortest span : " << sp.shortestSpan() << std::endl;
 		std::cout << "Longest span : " << sp.longestSpan() << std::endl;
 	}
-  catch(const std::exception& e)
+  	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}

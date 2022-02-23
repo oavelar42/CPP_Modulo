@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:46:08 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/24 19:42:33 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 16:16:40 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,18 +59,13 @@ unsigned int		Span::shortestSpan()
 {
 	if (vetor.size() < 2)
 		throw limiterror();
-        
-    std::vector<int>::iterator	iter = vetor.begin();
-	std::vector<int>::iterator	last = vetor.end();
-	unsigned int	shortest = UINT_MAX;
-
-	for (; iter != (last - 1); ++iter)
+    else
     {
-		if (static_cast<unsigned int>(*(iter + 1) - *iter) < shortest)
-			shortest = *(iter + 1) - *iter;
-	}
-
-	return shortest;
+        std::vector<int> vec;
+        std::copy(this->vetor.begin(), this->vetor.end(), std::back_inserter(vec));
+        std::sort(vec.begin(), vec.end());
+        return (vec.at(1) - vec.at(0));
+    }
 }
 
 void	Span::addVal(std::vector<int>::iterator const &begin,

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:36 by oavelar           #+#    #+#             */
-/*   Updated: 2022/01/24 18:49:52 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 15:49:33 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ int main( void )
         std::cout << "max( c, d ) = " << ::max( c, d ) << " . " OFF << std::endl;
         std::cout << "\n";
 
-    int i = 0.5;
-	int j = 0;
+    //my test
     
+    int i = -1;
+	int j = 0;
 	::swap( i, j );
         std::cout << GRE "i = " << i << ", j = " << j << std::endl;
         std::cout << "min( i, j ) = " << ::min( i, j ) << std::endl;

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:06:57 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/19 22:56:38 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/22 15:31:54 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,23 +43,15 @@ class Array
 };
 
 template<class T>
-Array<T>::Array(void)
-{
-    _array = new T;
-	_len = 0;
-}
+Array<T>::Array(void) : _array(new T[0]), _len(0) 
+{  }
 
 template<class T>
-Array<T>::~Array() 
-{
-    delete[] _array;
-}
+Array<T>::~Array() { delete[] _array; }
 
 template<class T>
-Array<T>::Array(unsigned int val) : _len(val)
-{
-    _array = new T[val];
-}
+Array<T>::Array(unsigned int val) : _array(new T[val]), _len(val) 
+{  }
 
 template<class T>
 Array<T>::Array(const Array<T> &copy) : _array(0), _len(0)

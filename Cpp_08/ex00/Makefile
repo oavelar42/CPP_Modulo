@@ -6,9 +6,11 @@
 #    By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 16:35:01 by oavelar           #+#    #+#              #
-#    Updated: 2022/02/19 01:51:13 by oavelar          ###   ########.fr        #
+#    Updated: 2022/02/23 15:57:02 by oavelar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+MAKEFLAGS		+= --quiet
 
 NAME = easyfind
 
@@ -21,7 +23,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 FILE = main.cpp
 
-OBJ = .o
+OBJ		:= $(FILE:%.cpp=%.o)
 
 OK			= [\033[32mOK\033[0m]
 RED			= \033[1;31m
@@ -30,7 +32,10 @@ OFF			= \033[0m
 
 all: $(NAME)
 
-$(NAME):
+%.o: %.cpp
+			$(CC) $(FLAGS) -o $@ -c $<
+
+$(NAME): $(OBJ)
 	@$(CC) $(FLAGS) $(FILE) -o $(NAME)
 	@echo "Compilation of $(MAG)$(NAME): $(OFF) $(OK)$(OFF)"
 

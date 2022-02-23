@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:44:05 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/19 22:12:32 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 14:03:14 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typename T::iterator easyfind(T &container, int val)
 
     res = std::find(container.begin(), container.end(), val);
 
-    if (*res != val)
+    if (container.end() == res)
         throw std::exception();
     return res;
 }

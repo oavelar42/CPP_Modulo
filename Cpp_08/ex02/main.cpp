@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:48:58 by oavelar           #+#    #+#             */
-/*   Updated: 2021/12/10 21:24:13 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 17:15:03 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int main(void)
 	MutantStack<int> stack;
 	stack.push(5);
 	stack.push(17);
-
-	std::cout << stack.top() << std::endl;
+	
+	std::cout << "Pop : " << stack.top() << std::endl;
 
 	stack.pop();
 
-	std::cout << stack.size() << std::endl;
+	std::cout << "Size : " << stack.size() << std::endl;
 
 	stack.push(3);
 	stack.push(5);
@@ -91,8 +91,6 @@ int main(void)
 		for (int i = 0; i <= 10; i++) {
         	num.push(i);
 		}
-
-		std::cout << "Top : " << num.top() << std::endl;
 
 		num.pop();
 

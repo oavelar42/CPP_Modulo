@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:55:43 by oavelar           #+#    #+#             */
-/*   Updated: 2021/11/05 20:49:27 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/23 15:51:01 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void swap(T &i, T &j)
 
 template< class T >
 
-T min(T const &i, T const &j)
+T min(T &i, T &j)
 {
     if (i < j)
         return (i);
@@ -44,7 +44,7 @@ T min(T const &i, T const &j)
 
 template< class T >
 
-T max(T const &i, T const &j)
+T max(T &i, T &j)
 {
     if (i > j)
         return (i);
