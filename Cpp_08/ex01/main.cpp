@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:46:22 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/23 16:51:04 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/24 17:13:26 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
     std::cout << LET "Main test :" OFF << std::endl;
     Span sp = Span(5);
     
-	sp.addNumber(5);
+	sp.addNumber(6);
 	sp.addNumber(3);
 	sp.addNumber(17);
 	sp.addNumber(9);
@@ -48,7 +48,7 @@ int main(void)
 		
 		sp.addNumber(1);
 		sp.addNumber(2);
-		sp.addNumber(2);
+		sp.addNumber(5);
 
 		std::cout << "Longest span : " << sp.longestSpan() << std::endl;
 		std::cout << "Shortest span : " << sp.shortestSpan() << std::endl;
@@ -66,7 +66,6 @@ int main(void)
 		Span	sp = Span(10000);
 		std::vector<int>	v;
 		
-		sp.addNumber(10);
 		for (int i = 1; i < 10000; i++)
 			v.push_back(i);
 		sp.addVal(v.begin(), v.end());

@@ -6,7 +6,7 @@
 /*   By: oavelar <oavelar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 19:46:08 by oavelar           #+#    #+#             */
-/*   Updated: 2022/02/23 16:16:40 by oavelar          ###   ########.fr       */
+/*   Updated: 2022/02/24 17:09:49 by oavelar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,28 @@ unsigned int		Span::shortestSpan()
 		throw limiterror();
     else
     {
-        std::vector<int> vec;
-        std::copy(this->vetor.begin(), this->vetor.end(), std::back_inserter(vec));
-        std::sort(vec.begin(), vec.end());
-        return (vec.at(1) - vec.at(0));
+        std::sort(vetor.begin(), vetor.end());
+
+        std::vector<int>::iterator it;
+        it = vetor.begin();
+
+        int i = 0;
+        long shortest = (vetor[1] - vetor[0]);
+
+        while(it != vetor.end() - 1) 
+        {
+            if ((vetor[i + 1] - vetor[i]) < shortest) {
+                shortest = ( vetor[i + 1] - vetor[i]);
+            }
+            i++;
+            it++;
+        }
+        return (shortest);
     }
 }
 
-void	Span::addVal(std::vector<int>::iterator const &begin,
-		std::vector<int>::iterator const &end)
+void    Span::addVal(std::vector<int>::iterator const &begin,
+		    std::vector<int>::iterator const &end)
 {
 	for (std::vector<int>::iterator iter = begin; iter < end; iter++)
 		this->addNumber(*iter);
